@@ -1,0 +1,260 @@
+/* ===== GLOBAL ===== */
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Set base font */
+  color: #333; /* Default text color */
+  background-color: #fff; /* Default background color */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Limit width of main sections but do not override Bootstrap container */
+.hero-section,
+.services-section,
+.portfolio-section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h2 {
+  font-size: 28px; /* Section headings */
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px; /* Space between navigation links */
+  margin-left: 20px; /* Space between logo and links */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500; /* Slightly bold text */
+  color: #000; /* Black text */
+  letter-spacing: 0.5px; /* Slightly spaced letters */
+  position: relative; /* For underline animation */
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Hover makes text red */
+.navbar-nav .nav-link:hover {
+  color: #000;
+}
+
+/* Active link style */
+.navbar-nav .nav-link.active {
+  color: #000;
+}
+
+/* Animated underline for active or hover state */
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  height: .5px;
+  width: 0;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.container.border-bottom {
+  padding-bottom: 12px; 
+  border-bottom: 1px solid #000;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  align-items: flex-start; /* Align content to top */
+}
+
+.hero-section .studio-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  margin-top: -10px;
+}
+
+.hero-section .studio-name .duan {
+  color: #d80027; /* Red accent */
+}
+
+.hero-section .studio-name .studio {
+  color: #000; /* Black text */
+}
+
+.hero-section .slogan .line1 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #000;
+}
+
+.hero-section .slogan .line2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero-section .slogan .love {
+  color: #e25858; /* Red emphasis */
+}
+
+.portrait {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.resume-badge {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  margin: 10px auto 0;
+}
+
+/* ===== SERVICES SECTION ===== */
+.label {
+  background-color: #4f6fa5; /* Blue background */
+  transform: skewX(-25deg); /* Slanted label */
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.label strong {
+  transform: skewX(25deg); /* Restore text upright */
+  display: inline-block;
+}
+
+.services-section p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* ===== PORTFOLIO SECTION ===== */
+.portfolio-section {
+  padding: 80px 0; /* Space above and below */
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Space between items */
+}
+
+.portfolio-item {
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-item .info {
+  padding: 15px;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.footer-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer a {
+  font-size: 20px;
+  transition: color 0.3s ease; /* Smooth hover */
+}
+
+footer a:hover {
+  color: #d80027;
+}
+
+footer p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ===== GLOBAL LAYOUT ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack hero content on small screens */
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-section .hero-left, 
+  .hero-section .hero-right {
+    width: 100%;
+  }
+
+  .label {
+    text-align: center;
+    display: inline-block;
+  }
+
+  .services-section,
+  .portfolio-section {
+    text-align: center;
+  }
+
+  /* Stack navigation links vertically in mobile view */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid #eee; /* Optional separator line */
+  }
+}
