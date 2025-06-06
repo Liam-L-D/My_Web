@@ -1,14 +1,19 @@
-/* ===== GLOBAL ===== */
+/* ==================== GLOBAL STYLES ==================== */
 body {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Set base font */
-  color: #333; /* Default text color */
-  background-color: #fff; /* Default background color */
-  line-height: 1.6; /* Improve readability */
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+  word-spacing: -0.1em; 
+/* Font Smoothing for Apple Devices */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Limit width of main sections but do not override Bootstrap container */
+.container,
 .hero-section,
 .services-section,
+.navbar,
 .portfolio-section {
   max-width: 1140px;
   margin: 0 auto;
@@ -17,244 +22,579 @@ body {
 }
 
 h2 {
-  font-size: 28px; /* Section headings */
+  font-size: 28px;
 }
 
-/* ===== NAVIGATION BAR ===== */
-.navbar 
-  padding-top: 20px;
-  padding-bottom: 20px;
+.section-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #b52a18;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 
 .navbar-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px; /* Space between navigation links */
-  margin-left: 20px; /* Space between logo and links */
+  gap: 30px;
 }
 
 .navbar-nav .nav-link {
-  font-weight: 500; /* Slightly bold text */
-  color: #000; /* Black text */
-  letter-spacing: 0.5px; /* Slightly spaced letters */
-  position: relative; /* For underline animation */
-  padding-bottom: 5px;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 0.5px;
+  font-size: 20px;
 }
 
-/* Hover makes text red */
+/* Hover state: deep red */
 .navbar-nav .nav-link:hover {
-  color: #000;
+  color: #d80027;
+  font-weight: 600;
 }
 
-/* Active link style */
+/* Active page link: bright red */
 .navbar-nav .nav-link.active {
-  color: #000;
+  color: #a6001a;
+  font-weight: 600;
 }
 
-/* Animated underline for active or hover state */
-.navbar-nav .nav-link::after {
-  content: "";
-  display: block;
-  height: .5px;
-  width: 0;
-  background-color: #000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: width 0.3s ease;
+.navbar-collapse {
+  justify-content: flex-start !important;
 }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
+.logo-img {
+  height: 60px;
+  width: auto;
 }
 
-.container.border-bottom {
-  padding-bottom: 12px; 
-  border-bottom: 1px solid #000;
+/* ==================== DUAN TITLE SECTION ==================== */
+.duan-title-section {
+  background-color: #fff;
+  margin-top: -6px;
+  padding-bottom: 4px;
+  padding-top: 0;
 }
 
-/* ===== HERO SECTION ===== */
-.hero-section {
-  align-items: flex-start; /* Align content to top */
-}
-
-.hero-section .studio-name {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 24px;
-  margin-top: -10px;
-}
-
-.hero-section .studio-name .duan {
-  color: #d80027; /* Red accent */
-}
-
-.hero-section .studio-name .studio {
-  color: #000; /* Black text */
-}
-
-.hero-section .slogan .line1 {
+.studio-name {
   font-size: 36px;
-  font-weight: 400;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  font-family: 'Impact', sans-serif;
+}
+
+.studio-name .duan {
+  color: #b52a18;
+}
+
+.studio-name .studio {
   color: #000;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1 1 50%;
+}
+
+.hero-left .slogan {
+  text-align: left;
+}
+
+/* 'Love Design' JS. */
+.hero-section .slogan .line1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: #000;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
 .hero-section .slogan .line2 {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 80px;
+  font-weight: 700;
   color: #000;
+  margin: 0;
 }
 
 .hero-section .slogan .love {
-  color: #e25858; /* Red emphasis */
+  color: #b52a18;
+}
+
+.slogan .line1 {
+  transition: all 0.3s ease;
+}
+
+.slogan .line1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .portrait {
-  width: 300px;
-  max-width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 460px;
+  border-radius: 12px; /* More noticeable rounding for elegance */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover interaction */
+  border: 4px solid #ffffff; /* Clean white border to frame the image */
 }
 
-.resume-badge {
-  font-size: 14px;
-  font-weight: 600;
-  width: 100px;
-  text-align: center;
-  margin: 10px auto 0;
+.portrait:hover {
+  transform: scale(1.02); /* Slight zoom-in on hover */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); /* Even deeper shadow when hovered */
 }
 
-/* ===== SERVICES SECTION ===== */
-.label {
-  background-color: #4f6fa5; /* Blue background */
-  transform: skewX(-25deg); /* Slanted label */
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.label strong {
-  transform: skewX(25deg); /* Restore text upright */
+.portrait-container {
+  position: relative;
   display: inline-block;
 }
 
-.services-section p {
-  font-size: 16px;
-  margin-bottom: 15px;
-  line-height: 1.5;
+.click-hint {
+  position: absolute;
+  bottom: 20px; /* Increased from 6px to lift it upward */
+  right: 6px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
 }
 
-/* ===== PORTFOLIO SECTION ===== */
+.portrait-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensure both image and button are centered */
+  gap: 12px; /* Spacing between photo and button */
+}
+
+.portrait-trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.resume-badge {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 24px;
+  background-color: #b52a18;
+  color: #fff;
+  border-radius: 999px; /* Rounded pill shape */
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+  transition: all 0.3s ease;
+  /* Removed border */
+  margin: 0 auto; /* Center under image */
+}
+.resume-badge:hover {
+  background-color: #8f1c0d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==================== SERVICES SECTION ==================== */
+.services-section {
+  background-color: #ffffff;
+  padding: 20px 0;
+  color: #333;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-title-wrapper {
+  background-color: #4461a9;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Title Text Style */
+.service-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+/* Accordion Wrapper */
+.accordion {
+  width: 100%;
+}
+
+/* Accordion Item */
+.accordion-item {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Accordion Header Button */
+.accordion-button {
+  background-color: transparent;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  box-shadow: none;
+}
+
+/* Hover State */
+.accordion-button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Accordion Body */
+.accordion-body {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Remove Bootstrap default caret */
+.accordion-button::after {
+  display: none;
+}
+
+/* Chevron Rotation Animation */
+.transition-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) .transition-icon {
+  transform: rotate(180deg);
+}
+
+/* Accordion-button emoji size */
+.accordion-button span {
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==================== MY PORTFOLIO PAGE==================== */
 .portfolio-section {
-  padding: 80px 0; /* Space above and below */
+  padding: 40px 0;
 }
 
 .portfolio-section h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+  font-size: 44px;
+  font-weight: 700;
+  color: #b52a18;
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px; /* Space between items */
+  gap: 20px;
 }
 
 .portfolio-item {
-  background-color: #f5f5f5;
+  background-color: #fff;
   border-radius: 6px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06); /* subtle shadow even before hover */
+  border: 1px solid rgba(0, 0, 0, 0.06); /* light edge line */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .portfolio-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform: translateY(-4px) scale(1.015); /* more dynamic hover */
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.20); /* stronger hover shadow */
+  border: 1px solid rgba(0, 0, 0, 0.12); /* slightly darker border on hover */
 }
 
 .portfolio-item img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 4px;
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.02); /* ultra-light shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* slightly enhanced but still minimal */
 }
 
 .portfolio-item .info {
-  padding: 15px;
+  padding: 12px 8px 4px;
   text-align: center;
+  font-weight: 700;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* ===== FOOTER ===== */
-.footer-inner {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
+.portfolio-item:hover .info {
+  color: #111;
 }
 
+/* ==================== FOOTER ==================== */
+
+/* ----- Footer Links (Social Icons or Quick Links) ----- */
 footer a {
-  font-size: 20px;
-  transition: color 0.3s ease; /* Smooth hover */
+  font-size: 20px;                /* For icon links */
+  text-decoration: none;          /* Remove underline */
+  vertical-align: middle;         /* Align icon/text baseline */
+  transition: color 0.3s ease;    /* Smooth color transition */
 }
 
 footer a:hover {
-  color: #d80027;
+  color: #d80027;                 /* Highlight color on hover (e.g. red) */
 }
 
+/* ----- General Footer Text (Outside Credits Area) ----- */
 footer p {
   font-size: 14px;
   margin-top: 10px;
+  margin-bottom: 6px;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
-/* ===== GLOBAL LAYOUT ===== */
-html, body {
-  height: 100%;
+/* ==================== FOOTER CREDITS ==================== */
+
+/* Container for credit text lines */
+.footer-credits {
+  text-align: center;
+  margin-top: 10px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+/* Text inside credits area */
+.footer-credits p {
+  font-size: 14px;
+  margin: 6px 0;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
-main {
-  flex: 1;
+/* Brand link ("Duan Studio") */
+.duan-brand {
+  font-weight: 600;               /* Only slightly bold */
+  text-decoration: none;
+  color: inherit;                 /* Inherit from paragraph */
+  font-size: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+  display: inline;
+  transition: color 0.3s ease;
 }
 
-/* ===== RESPONSIVE ===== */
+.duan-brand:hover {
+  color: #f7d084;                 /* Subtle brand color on hover */
+}
+
+/* ==================== FOR ALL PROJECTS==================== */
+.back-link {
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.back-link:hover {
+  color: #b52a18;
+}
+
+/* --- modal --- */
+.modal-content {
+  background-color: transparent;
+  text-align: center;
+}
+#aboutModal .modal-content {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* ==================== PROJECT GALLERY ==================== */
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: none; /* handled by .portfolio-item */
+  transition: box-shadow 0.3s ease;
+}
+
+.project-gallery .info {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.project-gallery .info:hover {
+  color: #b52a18;
+}
+
+/* ======================= Shared Carousel Modal Styles =================== */
+
+/* Ensure modal images do not overflow the screen height */
+.carousel-item img {
+  max-height: 90vh; /* Limit to 90% of viewport height */
+  object-fit: contain; /* Maintain aspect ratio inside container */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Soft shadow for focus */
+}
+
+/* Customize carousel navigation icon size */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-size: 100% 100%;
+}
+
+/* Optional: Hover effect for gallery thumbnails */
+.portfolio-item img:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Uniform square aspect ratio for thumbnails */
+.portfolio-item img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+/* --- next project botton --- */
+.prev-project-btn,
+.next-project-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #b52a18;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prev-project-btn:hover,
+.next-project-btn:hover {
+  background-color: #8d1f13;
+  transform: translateY(-2px);
+}
+
+/* ==================== RESPONSIVE (MEDIA QUERIES) ==================== */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .studio-name {
+    font-size: 34px;
+  }
+}
+
 @media (max-width: 768px) {
+  .logo-img {
+    height: 48px;
+  }
+  .studio-name {
+    font-size: 28px;
+    text-align: left;
+  }
+
   .hero-section {
-    flex-direction: column; /* Stack hero content on small screens */
+    flex-direction: column;
     text-align: center;
     align-items: center;
   }
 
-  .hero-section .hero-left, 
-  .hero-section .hero-right {
+  .hero-left,
+  .hero-right {
     width: 100%;
   }
 
-  .label {
+  .hero-left .slogan {
     text-align: center;
-    display: inline-block;
   }
 
-  .services-section,
+  .hero-section .slogan .line1 {
+    font-size: 36px;
+  }
+
+  .hero-section .slogan .line2 {
+    font-size: 42px;
+  }
+
+  .services-section {
+    text-align: center;
+  }
+
   .portfolio-section {
     text-align: center;
   }
 
-  /* Stack navigation links vertically in mobile view */
-  .navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin-left: 0;
-    padding-top: 10px;
+  .label {
+    width: 100%;
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .studio-name {
+    font-size: 36px;
   }
 
-  .navbar-collapse {
-    background: #fff;
-    padding: 10px 20px;
-    border-top: 1px solid #eee; /* Optional separator line */
+  .hero-section .slogan .line1 {
+    font-size: 36px;
+  }
+
+  .hero-section .slogan .line2 {
+    font-size: 50px;
   }
 }
