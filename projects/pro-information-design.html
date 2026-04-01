@@ -3,84 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Printing Design – Duan Studio</title>
-  <meta name="description" content="Printing design works including posters and brochures by Lian Duan." />
 
-  <link rel="apple-touch-icon" href="../imgs/apple-touch-icon.png" />
-  <meta name="theme-color" content="#4461a9" />
-  <link rel="manifest" href="../manifest.webmanifest" />
-  <link rel="icon" href="../imgs/favicon.png" type="image/png" />
+  <title>Website Design | Duan Studio</title>
+  <meta
+    name="description"
+    content="Website design and front-end development case studies by Duan Studio, featuring nonprofit and cultural organization projects including Asian Arts New York and WAADA."
+  />
+  <meta
+    name="keywords"
+    content="Duan Studio, Liam Duan, website design, web design, front-end development, UX/UI, nonprofit websites, portfolio"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="icon" href="../imgs/favicon.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../imgs/apple-touch-icon.png" sizes="180x180" />
+
+  <meta name="theme-color" content="#b52a18" />
+
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Duan Studio" />
   <meta name="format-detection" content="telephone=no" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <meta property="og:title" content="Website Design | Duan Studio" />
+  <meta
+    property="og:description"
+    content="Web design and front-end development case studies for nonprofit and cultural organizations."
+  />
+  <meta property="og:image" content="https://duanstudio.com/imgs/cover.webp" />
+  <meta property="og:url" content="https://duanstudio.com/projects/pro-website-design.html" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Website Design | Duan Studio" />
+  <meta
+    name="twitter:description"
+    content="Web design and front-end development case studies for nonprofit and cultural organizations."
+  />
+  <meta name="twitter:image" content="https://duanstudio.com/imgs/cover.webp" />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="../style.css" />
 </head>
+
 <body>
 
 <!-- Header -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-4">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="../index.html">
-        <img src="../imgs/LD_Logo.png" alt="Lian Duan Logo" class="me-2 logo-img">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="../portfolio.html">Portfolio</a></li>
-        </ul>
+ <header>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white px-4"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <img src="../imgs/LD_Logo.png" alt="Liam Duan Logo" class="me-2 logo-img" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../portfolio.html">Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="duan-title-section px-4 py-1">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <h1 class="studio-name mb-0">
+          <span class="duan">DUAN</span> <span class="studio">STUDIO</span>
+        </h1>
+        <a href="../portfolio.html" class="back-link" aria-label="Back to portfolio">Back to Portfolio</a>
       </div>
     </div>
-  </nav>
-  <div class="duan-title-section px-4 py-1">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="studio-name"><span class="duan">DUAN</span> <span class="studio">STUDIO</span></div>
-      <a href="../portfolio.html" class="back-link">Back</a>
-    </div>
-  </div>
-</header>
+  </header>
 
 <!-- Main Content -->
 <main class="container py-5">
 
-  <!-- Intro Section -->
-  <section class="project-intro text-center">
-    <h2 class="section-title" style="font-size: 28px;">Information Design – Data to Visual Stories</h2>
-    <img src="../imgs/Information_Design/data_visualization.webp" alt="Poster Wall" class="img-fluid rounded shadow mb-4 d-block mx-auto" style="width: 100%; max-width: 720px;" />
-  </section>
+  <!-- ================== PROJECT: INFORMATION DESIGN ================== -->
+<!-- This section presents a data visualization project focused on storytelling through design -->
 
-  <!-- Description Section -->
-  <section class="project-description mt-4">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="../imgs/Information_Design/My Journey.webp" alt="Folded Brochure" class="img-fluid rounded shadow" />
-      </div>
-      <div class="col-md-6">
-       <div class="px-2 px-md-4">
-       <h2 class="mb-3" style="font-size: 24px;">Transforming Data into Visual Narratives</h2>
-       <p>This project focuses on converting collected data into compelling visual narratives through the lens of information design.</p>
-       <p>Using techniques such as mapping, sequencing, and layering, the data is transformed into clear and engaging presentations.</p>
-       <p>These visualizations were developed using Prezi to emphasize storytelling in both educational and professional contexts.</p>
-       </div>
+<!-- ================== INTRO / HERO ================== -->
+<section class="project-intro text-center">
+  <!-- Project title -->
+  <h2 class="section-title" style="font-size: 28px;">
+    Information Design – Data to Visual Stories
+  </h2>
+
+  <!-- Hero image representing the project -->
+  <img 
+    src="../imgs/Information_Design/data_visualization.webp" 
+    alt="Information Design Visualization Overview"
+    class="img-fluid rounded shadow mb-4 d-block mx-auto"
+    style="width: 100%; max-width: 720px;"
+  />
+</section>
+
+<!-- ================== PROJECT DESCRIPTION ================== -->
+<section class="project-description mt-4">
+
+  <div class="row align-items-center">
+
+    <!-- LEFT: Supporting visual (process / artifact) -->
+    <div class="col-md-6 mb-4 mb-md-0">
+      <img 
+        src="../imgs/Information_Design/My Journey.webp" 
+        alt="Data Visualization Process Example"
+        class="img-fluid rounded shadow"
+      />
+    </div>
+
+    <!-- RIGHT: Project explanation -->
+    <div class="col-md-6">
+      <div class="px-2 px-md-4">
+
+        <!-- Sub-project title -->
+        <h2 class="mb-3" style="font-size: 24px;">
+          Transforming Data into Visual Narratives
+        </h2>
+
+        <!-- Project description -->
+        <p>
+          This project explores how raw data can be transformed into meaningful visual narratives through information design principles.
+        </p>
+
+        <p>
+          Techniques such as mapping, sequencing, and layering were applied to structure information in a clear and engaging way.
+        </p>
+
+        <p>
+          The final outcome combines visual storytelling and interaction design to improve audience understanding and engagement.
+        </p>
+
+        <!-- Live demo (GitHub Pages project) -->
+        <div class="mt-3">
+          <a 
+            href="https://liam-l-d.github.io/Visual_Life/timeline.html" 
+            target="_blank" 
+            class="btn-brand">
+            View Live Project
+          </a>
+        </div>
+
       </div>
     </div>
-    <div class="px-3 px-md-4">
+
+  </div>
+
+  <!-- ================== KEY FEATURES / DESIGN ELEMENTS ================== -->
+  <div class="px-3 px-md-4">
+
     <h3 class="mt-5">Key Design Elements</h3>
+
     <ul>
-    <li>Data visualization through time and location</li>
-    <li>Storytelling-focused presentation structure</li>
-    <li>Interactive Prezi-based design approach</li>
+      <li>Data visualization across time and location</li>
+      <li>Storytelling-driven information structure</li>
+      <li>Interactive presentation using Prezi</li>
     </ul>
-    <p class="mt-4"><b>Tools Used:</b> Prezi, Adobe Illustrator</p>
-    </div>
-    </section>
+
+    <!-- Tools used in the project -->
+    <p class="mt-4">
+      <b>Tools Used:</b> Prezi, Adobe Illustrator
+    </p>
+
+  </div>
+
+</section>
 
 <!-- Gallery Section -->
 <section class="project-gallery mt-5">
