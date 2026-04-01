@@ -3,83 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Graphic & Web Projects – Duan Studio</title>
-  <meta name="description" content="Explore design projects by Lian Duan – Graphic, Web, and UX/UI case studies from Duan Studio." />
-  <meta name="keywords" content="Portfolio, Graphic Design, Web Design, UX/UI, Lian Duan, Duan Studio, Albany Designer" />
+  <title>Duan Studio | Web Design & Development for Nonprofits</title>
+  <meta name="description" content="Duan Studio creates clean, user-friendly websites and visual systems for nonprofits, cultural organizations, and small businesses." />
+  <meta name="keywords" content="Duan Studio, Liam Duan, web design, front-end development, nonprofit website design, cultural organization website, graphic design, UX/UI" />
 
-  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Icons & PWA -->
-  <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png" sizes="180x180" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" href="imgs/favicon.png" type="image/png" sizes="32x32" />
-  <meta name="theme-color" content="#4461a9" />
+  <link rel="icon" href="imgs/favicon.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png" sizes="180x180">
+
+  <meta name="theme-color" content="#b52a18" />
+
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Duan Studio" />
   <meta name="format-detection" content="telephone=no" />
 
-  <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Portfolio | Duan Studio" />
-  <meta property="og:description" content="A showcase of design projects by Lian Duan – featuring graphic, web, and UX/UI design work." />
+  <meta property="og:title" content="Duan Studio | Web Design & Development for Nonprofits" />
+  <meta property="og:description" content="Clean, user-friendly websites and visual systems for nonprofits, cultural organizations, and small businesses." />
   <meta property="og:image" content="https://duanstudio.com/imgs/cover.webp" />
-  <meta property="og:url" content="https://duanstudio.com/portfolio.html" />
+  <meta property="og:url" content="https://duanstudio.com/" />
   <meta property="og:type" content="website" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Portfolio | Duan Studio" />
-  <meta name="twitter:description" content="Browse portfolio projects by Lian Duan in graphic and web design." />
+  <meta name="twitter:title" content="Duan Studio | Web Design & Development for Nonprofits" />
+  <meta name="twitter:description" content="Clean, user-friendly websites and visual systems for nonprofits, cultural organizations, and small businesses." />
   <meta name="twitter:image" content="https://duanstudio.com/imgs/cover.webp" />
 
-  <!-- Bootstrap and Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
-  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Optional JS -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
- <!-- ================== Header Section ================== -->
- <header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-4">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4" role="navigation" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="imgs/LD_Logo.png" alt="Lian Duan Logo" class="me-2 logo-img">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="imgs/LD_Logo.png" alt="Liam Duan Logo" class="me-2 logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-         <span class="navbar-toggler-icon"></span>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-         <a class="nav-link" href="index.html">About</a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link active" href="portfolio.html">Portfolio</a>
-        </li>
-       </ul>
-     </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-<!-- Duan Studio Title -->
   <div class="duan-title-section px-4 py-1">
     <div class="container">
-      <div class="studio-name">
+      <h1 class="studio-name">
         <span class="duan">DUAN</span> <span class="studio">STUDIO</span>
-      </div>
+      </h1>
     </div>
   </div>
 </header>
@@ -88,46 +74,55 @@
 <main>
 <section class="portfolio-section">
   <div class="container">
-    <!-- Simple and Bold Section Title -->
+
+    <!-- Title -->
     <h2 class="section-title">My Portfolio</h2>
 
-    <!-- Portfolio Grid: 6 Items Using Grid Layout -->
+    <!-- Grid -->
     <div class="portfolio-grid">
 
+      <!-- Chocolate -->
       <a href="projects/pro-chocolate-bar.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_Bar2.webp" alt="Project 1" />
-        <div class="info">Project-Chocolate Bar</div>
+        <img src="imgs/Cover/cover_Bar2.webp" alt="Chocolate Bar Project" loading="lazy" />
+        <div class="info">Chocolate Bar</div>
       </a>
 
+      <!-- EcoYummy -->
       <a href="projects/pro-eco-yummy.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_EcoYummy.webp" alt="Project 2" />
-        <div class="info">Project-EcoYummy</div>
+        <img src="imgs/Cover/cover_EcoYummy.webp" alt="EcoYummy Project" loading="lazy" />
+        <div class="info">EcoYummy</div>
       </a>
 
+      <!-- Funwe -->
       <a href="projects/pro-funwe.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_Funwe-card.webp" alt="Project 3" />
-        <div class="info">Project-Funwe</div>
+        <img src="imgs/Cover/cover_Funwe-card.webp" alt="Funwe Project" loading="lazy" />
+        <div class="info">Funwe</div>
       </a>
 
+      <!-- Printing -->
       <a href="projects/pro-printing-design.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_Poster on Wall.webp" alt="Project 4" />
+        <img src="imgs/Cover/cover_Poster on Wall.webp" alt="Printing Design Project" loading="lazy" />
         <div class="info">Printing Design</div>
       </a>
 
-        <a href="projects/pro-information-design.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_visualization.webp" alt="Project 5" />
+      <!-- Info Design -->
+      <a href="projects/pro-information-design.html" class="portfolio-item">
+        <img src="imgs/Cover/cover_visualization.webp" alt="Information Design Project" loading="lazy" />
         <div class="info">Information Design</div>
       </a>
-      
-        <a href="projects/pro-website-design.html" class="portfolio-item">
-        <img src="imgs/Cover/web-design_cover.webp" alt="Project 6" />
+
+      <!-- 🔥 Web Design（重点） -->
+      <a href="projects/pro-website-design.html#aany" class="portfolio-item">
+        <img src="imgs/Cover/web-design_cover.webp" alt="Web Design Project" loading="lazy" />
         <div class="info">Web Design</div>
-       </a>
-    
+      </a>
+
     </div>
   </div>
 </section>
+
 </main>
+
 <!-- ================== Footer ================== -->
 <footer class="bg-dark text-white pt-5 pb-3">
   <div class="container">
