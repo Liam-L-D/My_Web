@@ -3,64 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Duan Studio | Web Design & Development for Nonprofits</title>
-  <meta name="description" content="Duan Studio creates clean, user-friendly websites and visual systems for nonprofits, cultural organizations, and small businesses." />
-  <meta name="keywords" content="Duan Studio, Liam Duan, web design, front-end development, nonprofit website design, cultural organization website, graphic design, UX/UI" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <title>Duan Studio | Portfolio</title>
 
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Liam Duan - Graphic Design, Web Design, and Information Design projects." />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="imgs/favicon.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png" sizes="180x180">
-
-  <meta name="theme-color" content="#b52a18" />
-
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Duan Studio" />
-  <meta name="format-detection" content="telephone=no" />
-
-  <meta property="og:title" content="Duan Studio | Web Design & Development for Nonprofits" />
-  <meta property="og:description" content="Clean, user-friendly websites and visual systems for nonprofits, cultural organizations, and small businesses." />
-  <meta property="og:image" content="https://duanstudio.com/imgs/cover.webp" />
-  <meta property="og:url" content="https://duanstudio.com/" />
-  <meta property="og:type" content="website" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Duan Studio | Web Design & Development for Nonprofits" />
-  <meta name="twitter:description" content="Clean, user-friendly websites and visual systems for nonprofits, cultural organizations, and small businesses." />
-  <meta name="twitter:image" content="https://duanstudio.com/imgs/cover.webp" />
-
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
+<!-- ================= NAV ================= -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4" role="navigation" aria-label="Main navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4">
     <div class="container-fluid">
+
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="imgs/LD_Logo.png" alt="Liam Duan Logo" class="me-2 logo-img">
+        <img src="imgs/LD_Logo.png" alt="Logo" class="logo-img">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
         </ul>
       </div>
+
     </div>
   </nav>
 
+  <!-- DUAN STUDIO TITLE -->
   <div class="duan-title-section px-4 py-1">
     <div class="container">
       <h1 class="studio-name">
@@ -70,118 +57,105 @@
   </div>
 </header>
 
- <!-- ================== Portfolio Section ================== -->
+<!-- ================= PORTFOLIO ================= -->
 <main>
+
 <section class="portfolio-section">
   <div class="container">
 
     <!-- Title -->
-    <h2 class="section-title">My Portfolio</h2>
+    <h2 class="section-title reveal-up">My Portfolio</h2>
 
     <!-- Grid -->
     <div class="portfolio-grid">
 
-      <!-- Chocolate -->
-      <a href="projects/pro-chocolate-bar.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_Bar2.webp" alt="Chocolate Bar Project" loading="lazy" />
+      <!-- Project 1 -->
+      <a href="projects/pro-chocolate-bar.html" class="portfolio-item reveal-card" style="--delay:0.1s;">
+        <img src="imgs/Cover/cover_Bar2.webp" alt="Chocolate Bar Project">
         <div class="info">Chocolate Bar</div>
       </a>
 
-      <!-- EcoYummy -->
-      <a href="projects/pro-eco-yummy.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_EcoYummy.webp" alt="EcoYummy Project" loading="lazy" />
+      <!-- Project 2 -->
+      <a href="projects/pro-eco-yummy.html" class="portfolio-item reveal-card" style="--delay:0.2s;">
+        <img src="imgs/Cover/cover_EcoYummy.webp" alt="EcoYummy Project">
         <div class="info">EcoYummy</div>
       </a>
 
-      <!-- Funwe -->
-      <a href="projects/pro-funwe.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_Funwe-card.webp" alt="Funwe Project" loading="lazy" />
+      <!-- Project 3 -->
+      <a href="projects/pro-funwe.html" class="portfolio-item reveal-card" style="--delay:0.3s;">
+        <img src="imgs/Cover/cover_Funwe-card.webp" alt="Funwe Project">
         <div class="info">Funwe</div>
       </a>
 
-      <!-- Printing -->
-      <a href="projects/pro-printing-design.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_Poster on Wall.webp" alt="Printing Design Project" loading="lazy" />
+      <!-- Project 4 -->
+      <a href="projects/pro-printing-design.html" class="portfolio-item reveal-card" style="--delay:0.4s;">
+        <img src="imgs/Cover/cover_Poster on Wall.webp" alt="Printing Design">
         <div class="info">Printing Design</div>
       </a>
 
-      <!-- Info Design -->
-      <a href="projects/pro-information-design.html" class="portfolio-item">
-        <img src="imgs/Cover/cover_visualization.webp" alt="Information Design Project" loading="lazy" />
+      <!-- Project 5 -->
+      <a href="projects/pro-information-design.html" class="portfolio-item reveal-card" style="--delay:0.5s;">
+        <img src="imgs/Cover/cover_visualization.webp" alt="Information Design">
         <div class="info">Information Design</div>
       </a>
 
-      <!-- 🔥 Web Design -->
-      <a href="projects/pro-website-design.html" class="portfolio-item">
-        <img src="imgs/Cover/web-design_cover.webp" alt="Web Design Project" loading="lazy" />
+      <!-- Project 6 -->
+      <a href="projects/pro-website-design.html" class="portfolio-item reveal-card" style="--delay:0.6s;">
+        <img src="imgs/Cover/web-design_cover.webp" alt="Web Design">
         <div class="info">Web Design</div>
       </a>
 
     </div>
+
   </div>
 </section>
 
 </main>
 
-<!-- ================== Footer ================== -->
+<!-- ================= FOOTER ================= -->
 <footer class="bg-dark text-white pt-5 pb-3">
   <div class="container">
-    
-    <!-- Row 1: Logo + Info / Quick Links -->
+
     <div class="row">
-      <!-- Left Column -->
-      <div class="col-md-6 mb-4 text-md-start text-center">
-        <img src="imgs/LD_Logo_white.png" alt="Duan Studio Logo" style="height: 50px; width: auto;" class="mb-2" />
-        <p class="mb-1 fw-bold">DUAN STUDIO</p>
-        <p class="mb-1">Based in Albany, NY</p>
+      <div class="col-md-6 text-md-start text-center mb-4">
+        <img src="imgs/LD_Logo_white.png" alt="Logo" style="height:50px;">
+        <p class="fw-bold mt-2 mb-1">DUAN STUDIO</p>
+        <p>Based in Albany, NY</p>
       </div>
 
-      <!-- Right Column -->
-      <div class="col-md-6 mb-4 text-md-end text-center">
-        <h6 class="text-uppercase fw-bold">Quick Links</h6>
+      <div class="col-md-6 text-md-end text-center mb-4">
+        <h6 class="fw-bold text-uppercase">Quick Links</h6>
         <ul class="list-unstyled">
-          <li><a class="text-white text-decoration-none" href="index.html">About</a></li>
-          <li><a class="text-white text-decoration-none" href="portfolio.html">Portfolio</a></li>
-          <li><a class="text-white text-decoration-none" href="imgs/resume.pdf" target="_blank">Resume</a></li>
-          <li><a class="text-white text-decoration-none" href="mailto:lduan1996@gmail.com">Contact</a></li>
+          <li><a href="index.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="portfolio.html" class="text-white text-decoration-none">Portfolio</a></li>
+          <li><a href="imgs/resume.pdf" target="_blank" class="text-white text-decoration-none">Resume</a></li>
+          <li><a href="mailto:lduan1996@gmail.com" class="text-white text-decoration-none">Contact</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Row 2: Social Icons -->
-    <div class="row">
-      <div class="col-12 text-center mt-3">
-        <a href="https://www.facebook.com/Liam.L.Duan" target="_blank" aria-label="Facebook" class="me-3">
-          <i class="fab fa-facebook-f fa-lg text-white"></i>
-        </a>
-        <a href="https://www.instagram.com/liam.lduan/" target="_blank" aria-label="Instagram" class="me-3">
-          <i class="fab fa-instagram fa-lg text-white"></i>
-        </a>
-        <a href="mailto:lduan1996@gmail.com" aria-label="Email" class="me-3">
-          <i class="fas fa-envelope fa-lg text-white"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/liam-duan-248253285/" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in fa-lg text-white"></i>
-        </a>
-      </div>
+    <div class="text-center mt-3">
+      <a href="#"><i class="fab fa-facebook-f text-white me-3"></i></a>
+      <a href="#"><i class="fab fa-instagram text-white me-3"></i></a>
+      <a href="#"><i class="fab fa-linkedin text-white"></i></a>
     </div>
 
-    <!-- Row 3: Footer Credits -->
-    <div class="row">
-      <div class="col-12 text-center border-top border-white pt-3 mt-4">
-        <p class="small mb-2">© <span id="year"></span> 
-          <a href="index.html" class="duan-brand">Duan Studio</a>. All rights reserved.
-        </p>
-        <p class="small mb-0">Designed by Liam Duan</p>
-      </div>
+    <div class="text-center mt-4 border-top pt-3">
+      <p class="small mb-0">© <span id="year"></span> Duan Studio</p>
     </div>
+
   </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ================= SCRIPTS ================= -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 🔥 关键：动画 JS -->
+<script src="main.js"></script>
+
 </body>
 </html>

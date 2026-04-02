@@ -111,64 +111,63 @@
   </header>
 
   <main>
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-left">
-      <div class="portrait-wrapper">
-        <div class="portrait-container">
-          <button
-            type="button"
-            class="portrait-trigger"
-            data-bs-toggle="modal"
-            data-bs-target="#aboutModal"
-            aria-label="Click to view my story"
-          >
-            <img
-              src="imgs/Cover.webp"
-              alt="Portrait of Liam Duan"
-              class="portrait"
-              loading="lazy"
-            />
-          </button>
-          <div class="click-hint">👆 Click to view story</div>
+    <!-- Hero Section -->
+    <section class="hero-section reveal-group">
+      <div class="container">
+        <div class="hero-left reveal-card">
+          <div class="portrait-wrapper">
+            <div class="portrait-container">
+              <button
+                type="button"
+                class="portrait-trigger"
+                data-bs-toggle="modal"
+                data-bs-target="#aboutModal"
+                aria-label="Click to view my story"
+              >
+                <img
+                  src="imgs/Cover.webp"
+                  alt="Portrait of Liam Duan"
+                  class="portrait"
+                  loading="lazy"
+                />
+              </button>
+              <div class="click-hint">👆 Click to view story</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right reveal-card">
+          <h2 class="hero-title reveal-up">
+            Visual & <span id="rotating-word">Digital Design</span>
+          </h2>
+
+          <p class="hero-desc reveal-up">
+            I build clean, user-friendly websites and visual systems that help
+            brands, organizations, and creative teams communicate clearly, look
+            professional, and stay easy to maintain.
+          </p>
+
+          <div class="hero-buttons reveal-up">
+            <a href="portfolio.html" class="btn-brand">View Work</a>
+            <a href="mailto:lduan1996@gmail.com" class="btn-outline-brand">Start a Project</a>
+            <a
+              href="imgs/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-light-brand"
+            >
+              Resume
+            </a>
+          </div>
+
+          <p class="hero-meta reveal-up">
+            The Founder of Duan Studio | Graphic Design | Front-End Development | UX/UI
+          </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="hero-right">
-      <span class="hero-eyebrow">Duan Studio</span>
-      <h2 class="hero-title">Web Design & Development</h2>
-      <p class="hero-subtitle">with Graphic Design & UX/UI Thinking</p>
-
-      <p class="hero-desc">
-        I build clean, user-friendly websites and visual systems that help
-        brands, organizations, and creative teams communicate clearly, look
-        professional, and stay easy to maintain.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="portfolio.html" class="btn-brand">View Work</a>
-        <a href="mailto:lduan1996@gmail.com" class="btn-outline-brand">Start a Project</a>
-        <a
-          href="imgs/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-light-brand"
-        >
-          Resume
-        </a>
-      </div>
-
-      <p class="hero-meta">
-        Based in New York · Founder of Duan Studio · Graphic Design, Front-End
-        Development, and UX/UI
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Modal -->
+    <!-- Modal -->
     <div
       class="modal fade"
       id="aboutModal"
@@ -224,17 +223,17 @@
       </div>
     </div>
 
-    <div class="section-divider"></div>
+    <div class="section-divider reveal-up"></div>
 
-<!-- Services -->
-    <section class="services-section" aria-labelledby="servicesTitle">
+    <!-- Services -->
+    <section class="services-section reveal-group" aria-labelledby="servicesTitle">
       <div class="services-container">
-        <div class="service-title-wrapper">
+        <div class="service-title-wrapper reveal-up">
           <h2 class="service-title" id="servicesTitle">Services</h2>
         </div>
 
         <div class="accordion" id="servicesAccordion">
-          <div class="accordion-item">
+          <div class="accordion-item reveal-card">
             <h3 class="accordion-header" id="headingOne">
               <button
                 class="accordion-button"
@@ -245,7 +244,6 @@
                 aria-controls="collapseOne"
               >
                 <span>🎨 Graphic Design</span>
-                <i class="fas fa-chevron-down ms-auto transition-icon" aria-hidden="true"></i>
               </button>
             </h3>
             <div
@@ -262,7 +260,7 @@
             </div>
           </div>
 
-          <div class="accordion-item">
+          <div class="accordion-item reveal-card">
             <h3 class="accordion-header" id="headingTwo">
               <button
                 class="accordion-button collapsed"
@@ -273,7 +271,6 @@
                 aria-controls="collapseTwo"
               >
                 <span>💻 Front-End Development</span>
-                <i class="fas fa-chevron-down ms-auto transition-icon" aria-hidden="true"></i>
               </button>
             </h3>
             <div
@@ -290,7 +287,7 @@
             </div>
           </div>
 
-          <div class="accordion-item">
+          <div class="accordion-item reveal-card">
             <h3 class="accordion-header" id="headingThree">
               <button
                 class="accordion-button collapsed"
@@ -301,7 +298,6 @@
                 aria-controls="collapseThree"
               >
                 <span>🧠 UX/UI Design</span>
-                <i class="fas fa-chevron-down ms-auto transition-icon" aria-hidden="true"></i>
               </button>
             </h3>
             <div
@@ -321,73 +317,73 @@
       </div>
     </section>
 
-    <div class="section-divider"></div>
+    <div class="section-divider reveal-up"></div>
 
-<!-- Featured Work -->
-<section class="featured-section" aria-labelledby="featuredTitle">
-  <div class="featured-container">
-    <div class="featured-header">
-      <span class="featured-label">Selected Work</span>
-      <h2 class="featured-title" id="featuredTitle">Featured Projects</h2>
-    </div>
+    <!-- Featured Work -->
+    <section class="featured-section reveal-group" aria-labelledby="featuredTitle">
+      <div class="featured-container">
+        <div class="featured-header reveal-up">
+          <span class="featured-label">Selected Work</span>
+          <h2 class="featured-title" id="featuredTitle">Featured Projects</h2>
+        </div>
 
-    <div class="row g-4">
-      <!-- AANY -->
-      <div class="col-md-6">
-        <article class="project-card h-100">
-          <img
-            src="imgs/logo_red.png"
-            alt="Asian Arts New York website project preview"
-            loading="lazy"
-          />
-          <div class="project-card-body">
-            <h3 class="project-card-title">Asian Arts New York</h3>
-            <p class="project-card-text">
-              Website design, development, and ongoing maintenance for a
-              cultural organization, with a focus on event communication,
-              accessibility, and clear visual structure.
-            </p>
-            <a href="projects/pro-website-design.html#aany" class="project-link">
-              View Portfolio →
-            </a>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="project-card h-100 reveal-card">
+              <img
+                src="imgs/logo_red.png"
+                alt="Asian Arts New York website project preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <h3 class="project-card-title">Asian Arts New York</h3>
+                <p class="project-card-text">
+                  Website design, development, and ongoing maintenance for a
+                  cultural organization, with a focus on event communication,
+                  accessibility, and clear visual structure.
+                </p>
+                <a href="projects/pro-website-design.html#aany" class="project-link">
+                  View Portfolio →
+                </a>
+              </div>
+            </article>
           </div>
-        </article>
-      </div>
 
-      <!-- WAADA -->
-      <div class="col-md-6">
-        <article class="project-card h-100">
-          <img
-            src="imgs/WAADA_ModalLogo.png"
-            alt="Washington Art and Design Association website project preview"
-            loading="lazy"
-          />
-          <div class="project-card-body">
-            <h3 class="project-card-title">WAADA</h3>
-            <p class="project-card-text">
-              Visual and web support for an arts organization, including page
-              design, content presentation, event storytelling, and a more
-              maintainable site structure.
-            </p>
-            <a href="projects/pro-website-design.html#waada" class="project-link">
-              View Portfolio →
-            </a>
+          <div class="col-md-6">
+            <article class="project-card h-100 reveal-card">
+              <img
+                src="imgs/WAADA_ModalLogo.png"
+                alt="Washington Art and Design Association website project preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <h3 class="project-card-title">WAADA</h3>
+                <p class="project-card-text">
+                  Visual and web support for an arts organization, including page
+                  design, content presentation, event storytelling, and a more
+                  maintainable site structure.
+                </p>
+                <a href="projects/pro-website-design.html#waada" class="project-link">
+                  View Portfolio →
+                </a>
+              </div>
+            </article>
           </div>
-        </article>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA -->
-    <section class="cta-section" aria-labelledby="ctaTitle">
+    <!-- CTA -->
+    <section class="cta-section reveal-group" aria-labelledby="ctaTitle">
       <div class="cta-inner">
-        <h2 class="cta-title" id="ctaTitle">Have a project in mind?</h2>
-        <p class="cta-text">
+        <h2 class="cta-title reveal-up" id="ctaTitle">Have a project in mind?</h2>
+        <p class="cta-text reveal-up">
           Whether you need a new website, design support, or help improving an
           existing digital presence, I’d be glad to talk.
         </p>
-        <a href="mailto:lduan1996@gmail.com" class="btn-brand">Start a Project</a>
+        <div class="reveal-up">
+          <a href="mailto:lduan1996@gmail.com" class="btn-brand">Start a Project</a>
+        </div>
       </div>
     </section>
   </main>
@@ -475,6 +471,7 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="main.js" defer></script>
 </body>
 </html>
