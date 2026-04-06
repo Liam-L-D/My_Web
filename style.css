@@ -240,7 +240,7 @@ a {
 }
 
 .hero-title {
-  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  font-size: clamp(2rem, 3.0vw, 2.8rem);
   line-height: 0.98;
   font-weight: 800;
   color: #111;
@@ -256,11 +256,11 @@ a {
 }
 
 .hero-desc {
-  max-width: 620px;
+  max-width: 520px;
   font-size: 1.05rem;
-  line-height: 1.85;
+  line-height: 1.7;
   color: var(--text-muted);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-buttons {
@@ -282,7 +282,7 @@ a {
 }
 /* ------ js rotating - words ------ */
 #rotating-word {
-  font-size: 0.65em;   
+  font-size: .8em;   
   font-weight: 600;   
   color: #b52a18;
 }
