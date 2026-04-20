@@ -6,9 +6,9 @@ function initRotatingWord() {
   if (!el) return;
 
   const words = [
-    "Digital Design",
-    "Web Design",
-    "UX/UI Thinking"
+    "UX/UI Thinking",
+    "Front-end",
+    "Graphic Design"
   ];
 
   let index = 0;
@@ -24,9 +24,9 @@ function initRotatingWord() {
 
       setTimeout(() => {
         el.classList.remove("fade-in");
-      }, 300);
-    }, 220);
-  }, 2200);
+      }, 600);
+    }, 500);
+  }, 2600);
 }
 
 // ======================================
