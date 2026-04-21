@@ -4,158 +4,373 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Duan Studio | Portfolio</title>
+  <title>Portfolio | Duan Studio</title>
+  <meta
+    name="description"
+    content="Explore selected web, UX, and visual design projects by Duan Studio."
+  />
+  <meta
+    name="keywords"
+    content="Duan Studio portfolio, Liam Duan, web design, graphic design, UX, UI, front-end development"
+  />
 
-  <!-- SEO -->
-  <meta name="description" content="Portfolio of Liam Duan - Graphic Design, Web Design, and Information Design projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="imgs/favicon.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png" sizes="180x180" />
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="theme-color" content="#b52a18" />
 
-  <!-- Your CSS -->
+  <meta property="og:title" content="Portfolio | Duan Studio" />
+  <meta
+    property="og:description"
+    content="Selected web, UX, and visual design projects by Duan Studio."
+  />
+  <meta property="og:image" content="https://duanstudio.com/imgs/cover.webp" />
+  <meta property="og:url" content="https://duanstudio.com/portfolio" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio | Duan Studio" />
+  <meta
+    name="twitter:description"
+    content="Selected web, UX, and visual design projects by Duan Studio."
+  />
+  <meta name="twitter:image" content="https://duanstudio.com/imgs/cover.webp" />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<!-- ================= NAV ================= -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4">
-    <div class="container-fluid">
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <nav
+      class="navbar navbar-expand-lg navbar-light site-navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="container nav-shell">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="index.html"
+          aria-label="Duan Studio home"
+        >
+          <img src="imgs/nav_logo.png" alt="Duan Studio Logo" class="logo-img" />
+        </a>
 
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="imgs/LD_Logo.png" alt="Logo" class="logo-img">
-      </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="portfolio.html">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#process">Process</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item nav-contact-item">
+              <a class="nav-link nav-contact-link" href="mailto:lduan1996@gmail.com">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
 
-    </div>
-  </nav>
+  <!-- ================= MAIN ================= -->
+  <main class="site-main portfolio-page">
 
-  <!-- DUAN STUDIO TITLE -->
-  <div class="duan-title-section px-4 py-1">
+    <!-- ================= PORTFOLIO SECTION ================= -->
+    <section class="portfolio-section section-block section-white reveal-group">
+      <div class="container section-shell">
+
+        <!-- ================= FILTERS ================= -->
+        <div class="portfolio-toolbar reveal-up">
+          <div class="portfolio-filters" aria-label="Project categories">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="web">Web</button>
+            <button class="filter-btn" type="button" data-filter="branding">Branding</button>
+            <button class="filter-btn" type="button" data-filter="information">Information</button>
+            <button class="filter-btn" type="button" data-filter="visual">Visual</button>
+          </div>
+        </div>
+<br>
+        <!-- ================= PROJECT GRID ================= -->
+        <div class="row g-4" id="portfolioGrid">
+
+          <!-- AANY -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="web branding">
+            <article class="project-card h-100">
+              <img
+                src="imgs/logo_red.png"
+                alt="Asian Arts New York project preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <p class="project-tag">Web Design • Front-End</p>
+                <h3 class="project-card-title">Asian Arts New York</h3>
+                <p class="project-card-text">
+                  Website design, development, and visual communication for a cultural organization,
+                  with a focus on structured content and event presentation.
+                </p>
+                <a href="projects/pro-website-design.html#aany" class="project-link">
+                  View Project →
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- WAADA -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="web">
+            <article class="project-card h-100">
+              <img
+                src="imgs/WAADA_ModalLogo.png"
+                alt="WAADA project preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <p class="project-tag">Web Support • UX Thinking</p>
+                <h3 class="project-card-title">WAADA</h3>
+                <p class="project-card-text">
+                  Designed and maintained visual and web systems for an arts organization,
+                  focusing on user experience, content structure, and scalable updates.
+                </p>
+                <a href="projects/pro-website-design.html#waada" class="project-link">
+                  View Project →
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Funwe -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="branding visual">
+            <article class="project-card h-100">
+              <img
+                src="imgs/Cover/cover_Funwe-card.webp"
+                alt="Funwe branding project preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <p class="project-tag">Brand Design • Visual Identity</p>
+                <h3 class="project-card-title">Funwe Project</h3>
+                <p class="project-card-text">
+                  A capstone branding project focused on logo design, visual identity,
+                  and promotional materials from concept to final presentation.
+                </p>
+                <a href="projects/pro-funwe.html" class="project-link">
+                  View Project →
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Information Design -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="information">
+            <article class="project-card h-100">
+              <img
+                src="imgs/Cover/cover_visualization.webp"
+                alt="Information design project preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <p class="project-tag">Information Design • Visual Storytelling</p>
+                <h3 class="project-card-title">Information Design</h3>
+                <p class="project-card-text">
+                  A project exploring how data, visual hierarchy, and narrative structure
+                  can improve clarity and audience understanding.
+                </p>
+                <a href="projects/pro-information-design.html" class="project-link">
+                  View Project →
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Printing Design -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="visual">
+            <article class="project-card h-100">
+              <img
+                src="imgs/Cover/cover_printing.webp"
+                alt="Printing and graphic design preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <p class="project-tag">Graphic Design • Print</p>
+                <h3 class="project-card-title">Printing Design</h3>
+                <p class="project-card-text">
+                  Print-focused design work that emphasizes layout clarity,
+                  visual consistency, and communication across promotional materials.
+                </p>
+                <a href="projects/pro-printing-design.html" class="project-link">
+                  View Project →
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Chocolate Bar -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="branding visual">
+            <article class="project-card h-100">
+              <img
+                src="imgs/Cover/cover_chocolate_bar.webp"
+                alt="Chocolate bar packaging project preview"
+                loading="lazy"
+              />
+              <div class="project-card-body">
+                <p class="project-tag">Packaging • Brand Visuals</p>
+                <h3 class="project-card-title">Chocolate Bar Project</h3>
+                <p class="project-card-text">
+                  A packaging-centered visual design project focused on product presentation,
+                  branding, and shelf-level visual appeal.
+                </p>
+                <a href="projects/pro-chocolate-bar.html" class="project-link">
+                  View Project →
+                </a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-section text-white pt-5 pb-3 bg-dark">
     <div class="container">
-      <h1 class="studio-name">
-        <span class="duan">DUAN</span> <span class="studio">STUDIO</span>
-      </h1>
-    </div>
-  </div>
-</header>
+      <div class="row">
+        <div class="col-md-6 mb-4 text-md-start text-center">
+          <img
+            src="imgs/LD_Logo_white.png"
+            alt="Duan Studio Logo"
+            style="height: 50px; width: auto;"
+            class="mb-2"
+          />
+          <p class="mb-1 fw-bold">DUAN STUDIO</p>
+          <p class="mb-1">Based in Albany, NY</p>
+        </div>
 
-<!-- ================= PORTFOLIO ================= -->
-<main>
-
-<section class="portfolio-section">
-  <div class="container">
-
-    <!-- Title -->
-    <h2 class="section-title reveal-up">My Portfolio</h2>
-
-    <!-- Grid -->
-    <div class="portfolio-grid">
-
-      <!-- Project 1 -->
-      <a href="projects/pro-chocolate-bar.html" class="portfolio-item reveal-card" style="--delay:0.1s;">
-        <img src="imgs/Cover/cover_Bar2.webp" alt="Chocolate Bar Project">
-        <div class="info">Chocolate Bar</div>
-      </a>
-
-      <!-- Project 2 -->
-      <a href="projects/pro-eco-yummy.html" class="portfolio-item reveal-card" style="--delay:0.2s;">
-        <img src="imgs/Cover/cover_EcoYummy.webp" alt="EcoYummy Project">
-        <div class="info">EcoYummy</div>
-      </a>
-
-      <!-- Project 3 -->
-      <a href="projects/pro-funwe.html" class="portfolio-item reveal-card" style="--delay:0.3s;">
-        <img src="imgs/Cover/cover_Funwe-card.webp" alt="Funwe Project">
-        <div class="info">Funwe</div>
-      </a>
-
-      <!-- Project 4 -->
-      <a href="projects/pro-printing-design.html" class="portfolio-item reveal-card" style="--delay:0.4s;">
-        <img src="imgs/Cover/cover_Poster on Wall.webp" alt="Printing Design">
-        <div class="info">Printing Design</div>
-      </a>
-
-      <!-- Project 5 -->
-      <a href="projects/pro-information-design.html" class="portfolio-item reveal-card" style="--delay:0.5s;">
-        <img src="imgs/Cover/cover_visualization.webp" alt="Information Design">
-        <div class="info">Information Design</div>
-      </a>
-
-      <!-- Project 6 -->
-      <a href="projects/pro-website-design.html" class="portfolio-item reveal-card" style="--delay:0.6s;">
-        <img src="imgs/Cover/web-design_cover.webp" alt="Web Design">
-        <div class="info">Web Design</div>
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="bg-dark text-white pt-5 pb-3">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-6 text-md-start text-center mb-4">
-        <img src="imgs/LD_Logo_white.png" alt="Logo" style="height:50px;">
-        <p class="fw-bold mt-2 mb-1">DUAN STUDIO</p>
-        <p>Based in Albany, NY</p>
+        <div class="col-md-6 mb-4 text-md-end text-center">
+          <h6 class="text-uppercase fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a class="text-white text-decoration-none" href="portfolio.html">Work</a></li>
+            <li><a class="text-white text-decoration-none" href="index.html#services">Services</a></li>
+            <li><a class="text-white text-decoration-none" href="index.html#process">Process</a></li>
+            <li><a class="text-white text-decoration-none" href="index.html#about">About</a></li>
+            <li><a class="text-white text-decoration-none" href="mailto:lduan1996@gmail.com">Contact</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="col-md-6 text-md-end text-center mb-4">
-        <h6 class="fw-bold text-uppercase">Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none">About</a></li>
-          <li><a href="portfolio.html" class="text-white text-decoration-none">Portfolio</a></li>
-          <li><a href="imgs/resume.pdf" target="_blank" class="text-white text-decoration-none">Resume</a></li>
-          <li><a href="mailto:lduan1996@gmail.com" class="text-white text-decoration-none">Contact</a></li>
-        </ul>
+      <div class="row">
+        <div class="col-12 text-center mt-3">
+          <a
+            href="https://www.facebook.com/Liam.L.Duan"
+            target="_blank"
+            aria-label="Facebook"
+            class="me-3"
+          >
+            <i class="fab fa-facebook-f fa-lg text-white"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/liam.lduan/"
+            target="_blank"
+            aria-label="Instagram"
+            class="me-3"
+          >
+            <i class="fab fa-instagram fa-lg text-white"></i>
+          </a>
+          <a href="mailto:lduan1996@gmail.com" aria-label="Email" class="me-3">
+            <i class="fas fa-envelope fa-lg text-white"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/liam-duan-248253285/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in fa-lg text-white"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center border-top border-white pt-3 mt-4">
+          <div class="footer-credits">
+            <p class="small mb-2">
+              © <span id="year"></span>
+              <a href="index.html" class="duan-brand">Duan Studio</a>. All rights reserved.
+            </p>
+            <p class="small mb-0">Designed by Liam Duan</p>
+          </div>
+        </div>
       </div>
     </div>
+  </footer>
 
-    <div class="text-center mt-3">
-      <a href="#"><i class="fab fa-facebook-f text-white me-3"></i></a>
-      <a href="#"><i class="fab fa-instagram text-white me-3"></i></a>
-      <a href="#"><i class="fab fa-linkedin text-white"></i></a>
-    </div>
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    <div class="text-center mt-4 border-top pt-3">
-      <p class="small mb-0">© <span id="year"></span> Duan Studio</p>
-    </div>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const portfolioCards = document.querySelectorAll(".portfolio-card");
 
-  </div>
-</footer>
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
 
-<!-- ================= SCRIPTS ================= -->
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        portfolioCards.forEach((card) => {
+          const categories = card.getAttribute("data-category");
 
-<!-- 🔥 关键：动画 JS -->
-<script src="main.js"></script>
+          if (filter === "all" || categories.includes(filter)) {
+            card.classList.remove("is-hidden");
+          } else {
+            card.classList.add("is-hidden");
+          }
+        });
+      });
+    });
+  </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

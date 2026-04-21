@@ -6,9 +6,9 @@ function initRotatingWord() {
   if (!el) return;
 
   const words = [
-    "UX/UI Thinking",
-    "Front-end",
-    "Graphic Design"
+    "UX/UI Systems",
+    "Web Interfaces",
+    "Visual Identities"
   ];
 
   let index = 0;
