@@ -1,4 +1,13 @@
 // ==============================
+// Footer Year
+// ==============================
+function initFooterYear() {
+  const yearEl = document.getElementById("year");
+  if (!yearEl) return;
+  yearEl.textContent = new Date().getFullYear();
+}
+
+// ==============================
 // Typed Text Effect
 // ==============================
 function initRotatingWord() {
@@ -51,13 +60,13 @@ function initNextProjectButton() {
   const nextProject = projectList[nextIndex];
   const container = document.getElementById("next-project-btn-container");
 
-  if (container && !container.querySelector("a")) {
-    const nextBtn = document.createElement("a");
-    nextBtn.href = nextProject;
-    nextBtn.className = "btn btn-outline-primary";
-    nextBtn.textContent = "Next Project →";
-    container.appendChild(nextBtn);
-  }
+  if (!container || container.querySelector("a")) return;
+
+  const nextBtn = document.createElement("a");
+  nextBtn.href = nextProject;
+  nextBtn.className = "btn btn-outline-primary";
+  nextBtn.textContent = "Next Project →";
+  container.appendChild(nextBtn);
 }
 
 // ===============================================
@@ -83,47 +92,43 @@ function initProjectGalleryModal() {
 }
 
 // ===============================================
-// Portfolio Reveal Animation
+// Reveal Animation
 // ===============================================
 function initRevealAnimation() {
-  const groups = document.querySelectorAll(".reveal-group");
-  const standaloneItems = document.querySelectorAll(
-    ".reveal-up:not(.reveal-group .reveal-up), .reveal-card:not(.reveal-group .reveal-card)"
-  );
+  const revealGroups = document.querySelectorAll(".reveal-group");
+  const revealItems = document.querySelectorAll(".reveal-up, .reveal-card");
+  const isPortfolioPage = document.body.classList.contains("portfolio-page");
 
-  groups.forEach((group) => {
-    const items = group.querySelectorAll(".reveal-up, .reveal-card");
-    items.forEach((item) => item.classList.add("reveal-ready"));
+  if (!revealItems.length) return;
+
+  revealGroups.forEach((group) => {
+    const groupItems = group.querySelectorAll(".reveal-up, .reveal-card");
+
+    groupItems.forEach((item, index) => {
+      if (
+        !isPortfolioPage &&
+        (
+          item.closest(".services-section") ||
+          item.closest(".hero-section") ||
+          item.closest(".featured-projects-section")
+        )
+      ) {
+        item.style.setProperty("--delay", "0s");
+      } else {
+        item.style.setProperty(
+          "--delay",
+          isPortfolioPage ? `${index * 0.08}s` : `${index * 0.03}s`
+        );
+      }
+    });
   });
 
-  standaloneItems.forEach((item) => item.classList.add("reveal-ready"));
-
   if (!("IntersectionObserver" in window)) {
-    document
-      .querySelectorAll(".reveal-ready")
-      .forEach((item) => item.classList.add("is-visible"));
+    revealItems.forEach((item) => item.classList.add("is-visible"));
     return;
   }
 
-  const groupObserver = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        const items = entry.target.querySelectorAll(".reveal-up, .reveal-card");
-        items.forEach((item) => item.classList.add("is-visible"));
-        obs.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.18,
-      rootMargin: "0px 0px -10% 0px"
-    }
-  );
-
-  groups.forEach((group) => groupObserver.observe(group));
-
-  const itemObserver = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
@@ -132,20 +137,64 @@ function initRevealAnimation() {
       });
     },
     {
-      threshold: 0.18,
-      rootMargin: "0px 0px -10% 0px"
+      threshold: isPortfolioPage ? 0.08 : 0.02,
+      rootMargin: isPortfolioPage ? "0px 0px -15% 0px" : "0px 0px -8% 0px"
     }
   );
 
-  standaloneItems.forEach((item) => itemObserver.observe(item));
+  revealItems.forEach((item) => observer.observe(item));
+}
+
+// ===============================================
+// Portfolio Filter
+// ===============================================
+function initPortfolioFilter() {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+  if (!filterButtons.length || !portfolioCards.length) return;
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      let visibleIndex = 0;
+
+      portfolioCards.forEach((card) => {
+        const categories = card.getAttribute("data-category") || "";
+        const shouldShow = filter === "all" || categories.includes(filter);
+
+        if (shouldShow) {
+          card.classList.remove("is-hidden");
+          card.classList.remove("is-visible");
+          card.style.setProperty("--delay", `${visibleIndex * 0.08}s`);
+          visibleIndex += 1;
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              card.classList.add("is-visible");
+            });
+          });
+        } else {
+          card.classList.add("is-hidden");
+          card.classList.remove("is-visible");
+        }
+      });
+    });
+  });
 }
 
 // ==============================
 // Init All
 // ==============================
 document.addEventListener("DOMContentLoaded", function () {
+  initFooterYear();
   initRotatingWord();
   initNextProjectButton();
   initProjectGalleryModal();
   initRevealAnimation();
+  initPortfolioFilter();
 });

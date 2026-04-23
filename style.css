@@ -10,7 +10,7 @@
   --text-muted: #666666;
 
   --bg-white: #ffffff;
-  --bg-soft: #f6f6f6;
+  --bg-soft: #f6f6f3;
   --bg-soft-2: #eeeeee;
   --bg-soft-mobile: #f4f4f4;
 
@@ -29,7 +29,7 @@
   --site-max-width: 1180px;
   --site-gutter: 28px;
 
-  --section-space: 64px;
+  --section-space: 72px;
   --header-height: 88px;
 }
 
@@ -74,6 +74,7 @@ ul {
 
 .site-main {
   overflow-x: clip;
+  padding-top: 88px;
 }
 
 /* =========================
@@ -102,7 +103,7 @@ ul {
 }
 
 .section-shell {
-  max-width: 100%;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -111,6 +112,8 @@ ul {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* =========================
@@ -127,7 +130,7 @@ ul {
 }
 
 .section-soft {
-  background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg-soft-2) 100%);
+  background: var(--bg-soft);
 }
 
 .section-soft::before {
@@ -174,16 +177,31 @@ ul {
   color: var(--text-dark);
 }
 
-.section-intro {
+.section-intro,
+.section-heading .section-intro {
   max-width: 760px;
   margin: 1rem auto 0;
-  font-size: 1.02rem;
-  line-height: 1.85;
-  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(20, 20, 20, 0.72);
 }
 
 .section-action {
   margin-top: 2rem;
+}
+
+.section-block p {
+  line-height: 1.85;
+}
+
+.section-block ul li {
+  line-height: 1.8;
+}
+
+.section-block .btn-brand,
+.section-block .btn-outline-brand {
+  min-width: 180px;
+  justify-content: center;
 }
 
 /* =========================
@@ -221,8 +239,9 @@ ul {
 }
 
 .logo-img {
-  height: 46px;
+  height: 42px;
   width: auto;
+  object-fit: contain;
 }
 
 .navbar-toggler {
@@ -468,42 +487,50 @@ ul {
 }
 
 /* =========================
-   PROJECT CARDS
+   PROJECT CARDS 
 ========================= */
+
 .project-card {
+  position: relative;
   height: 100%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.1);
-}
-
+/* 图片动画 */
 .project-card img {
   width: 100%;
   height: 240px;
   object-fit: cover;
   background: #f3f3f3;
+
+  transition: transform 0.6s ease;
 }
 
+/* 内容区域 */
 .project-card-body {
   padding: 1.4rem 1.4rem 1.5rem;
 }
 
+/* 标题 */
 .project-card-title {
   margin: 0 0 0.8rem;
   font-size: 1.2rem;
   font-weight: 750;
   line-height: 1.32;
   color: var(--text-dark);
+
+  transition: color 0.25s ease;
 }
 
+/* 描述 */
 .project-card-text {
   margin-bottom: 1rem;
   font-size: 0.98rem;
@@ -511,15 +538,43 @@ ul {
   color: var(--text-muted);
 }
 
-.project-link {
-  display: inline-block;
-  font-weight: 700;
+/* =========================
+   HOVER EFFECT (KEY PART)
+========================= */
+
+.project-card-link:hover .project-card {
+  transform: translateY(-10px);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* 图片轻微放大 */
+.project-card-link:hover .project-card img {
+  transform: scale(1.05);
+}
+
+/* 标题变红（最重要） */
+.project-card-link:hover .project-card-title {
   color: var(--brand-red);
 }
 
-.project-link:hover,
-.project-link:focus {
-  color: var(--brand-red-dark);
+/* 右下角提示（隐形 → 出现） */
+.project-card::after {
+  content: "View →";
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--brand-red);
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+}
+
+.project-card-link:hover .project-card::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =========================
@@ -546,12 +601,6 @@ ul {
 /* =========================
    ABOUT / CTA
 ========================= */
-.about-shell,
-.cta-box {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .cta-text {
   margin-top: 1rem;
   margin-bottom: 0;
@@ -568,9 +617,9 @@ ul {
   margin-top: 1.6rem;
 }
 
-/* =========================
+/* =======================================================
    PORTFOLIO PAGE
-========================= */
+======================================================= */
 .portfolio-page {
   padding-top: 60px;
 }
@@ -611,7 +660,6 @@ ul {
   color: var(--text-muted);
 }
 
-/* filter wrap */
 .portfolio-filter-wrap {
   padding-top: 14px;
   padding-bottom: 18px;
@@ -684,6 +732,62 @@ ul {
   display: none !important;
 }
 
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.portfolio-item .info {
+  padding: 14px 16px 16px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+.project-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-link:hover,
+.project-card-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   MODAL / MEDIA
+========================= */
+.modal-content img {
+  max-height: 82vh;
+  object-fit: contain;
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -694,33 +798,42 @@ ul {
 .footer-section p,
 .footer-section h6,
 .footer-section a,
-.footer-section i {
-  color: #ffffff;
-}
-
-.footer-section a:hover,
-.footer-section a:focus {
-  color: #ffffff;
-  opacity: 0.86;
-}
-
+.footer-section i,
 .duan-brand {
   color: #ffffff;
 }
 
+.footer-section a:hover,
+.footer-section a:focus,
 .duan-brand:hover,
 .duan-brand:focus {
   color: #ffffff;
-  opacity: 0.9;
+  opacity: 0.86;
+}
+
+.footer-section .duan-brand {
+  text-decoration: none;
 }
 
 /* =========================
-   REVEAL DEFAULT
+   REVEAL ANIMATION
 ========================= */
+
 .reveal-up,
 .reveal-card {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--delay, 0s);
+  will-change: opacity, transform;
+}
+
+.reveal-up.is-visible,
+.reveal-card.is-visible {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
 }
 
 /* =========================
@@ -749,8 +862,12 @@ ul {
   :root {
     --site-max-width: 100%;
     --site-gutter: 22px;
-    --section-space: 76px;
+    --section-space: 60px;
     --header-height: 82px;
+  }
+
+  .site-main {
+    padding-top: 82px;
   }
 
   .site-navbar {
@@ -813,6 +930,11 @@ ul {
     padding-bottom: 16px;
   }
 
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
   .project-card img {
     height: 220px;
   }
@@ -824,12 +946,16 @@ ul {
 @media (max-width: 767.98px) {
   :root {
     --site-gutter: 18px;
-    --section-space: 62px;
+    --section-space: 48px;
     --header-height: 76px;
   }
 
   body {
     line-height: 1.6;
+  }
+
+  .site-main {
+    padding-top: 78px;
   }
 
   .site-navbar {
@@ -853,7 +979,8 @@ ul {
     font-size: 2rem;
   }
 
-  .section-intro {
+  .section-intro,
+  .section-heading .section-intro {
     font-size: 0.98rem;
     line-height: 1.75;
   }
@@ -881,8 +1008,11 @@ ul {
 
   .btn-brand,
   .btn-outline-brand,
-  .btn-light-brand {
+  .btn-light-brand,
+  .section-block .btn-brand,
+  .section-block .btn-outline-brand {
     width: 100%;
+    min-width: unset;
   }
 
   .featured-section .row,
@@ -913,6 +1043,19 @@ ul {
   .filter-btn {
     font-size: 0.82rem;
     padding: 6px 12px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .portfolio-item {
+    border-radius: 16px;
+  }
+
+  .portfolio-item .info {
+    padding: 12px 14px 14px;
   }
 
   .project-card {
@@ -963,7 +1106,7 @@ ul {
 @media (max-width: 575.98px) {
   :root {
     --site-gutter: 16px;
-    --section-space: 56px;
+    --section-space: 48px;
   }
 
   .hero-title {
@@ -1006,5 +1149,14 @@ ul {
 
   .services-accordion .accordion-button span {
     padding-right: 0.5rem;
+  }
+}
+
+/* =========================
+   DESKTOP FIRST SECTION TUNE
+========================= */
+@media (min-width: 992px) {
+  .section-block:first-of-type {
+    padding-top: 86px;
   }
 }
