@@ -7,11 +7,11 @@
   <title>Portfolio | Duan Studio</title>
   <meta
     name="description"
-    content="Explore selected web, UX, and visual design projects by Duan Studio."
+    content="Explore selected UX/UI, web, branding, information design, and visual communication projects by Duan Studio."
   />
   <meta
     name="keywords"
-    content="Duan Studio portfolio, Liam Duan, web design, graphic design, UX, UI, front-end development"
+    content="Duan Studio portfolio, Liam Duan, UX UI design, web design, graphic design, branding, information design, front-end development"
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +31,7 @@
   <meta property="og:title" content="Portfolio | Duan Studio" />
   <meta
     property="og:description"
-    content="Selected web, UX, and visual design projects by Duan Studio."
+    content="Selected UX/UI, web, branding, and visual design projects by Duan Studio."
   />
   <meta property="og:image" content="https://duanstudio.com/imgs/cover.webp" />
   <meta property="og:url" content="https://duanstudio.com/portfolio" />
@@ -41,7 +41,7 @@
   <meta name="twitter:title" content="Portfolio | Duan Studio" />
   <meta
     name="twitter:description"
-    content="Selected web, UX, and visual design projects by Duan Studio."
+    content="Selected UX/UI, web, branding, and visual design projects by Duan Studio."
   />
   <meta name="twitter:image" content="https://duanstudio.com/imgs/cover.webp" />
 
@@ -58,7 +58,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="portfolio-page" style="padding-top: 0;">
 
   <!-- ================= HEADER ================= -->
   <header class="site-header">
@@ -109,31 +109,44 @@
   </header>
 
   <!-- ================= MAIN ================= -->
-  <main class="site-main portfolio-page">
-    <section class="portfolio-section section-block section-white reveal-group">
+  <main class="site-main">
+
+    <!-- ================= PORTFOLIO HERO ================= -->
+    <section class="portfolio-hero section-white reveal-group" aria-labelledby="portfolioTitle">
       <div class="container section-shell">
-
-        <!-- ================= FILTERS ================= -->
-        <div class="portfolio-toolbar reveal-up">
-          <div class="portfolio-filters" aria-label="Project categories">
-            <span class="filter-label">Filter:</span>
-            <button class="filter-btn active" type="button" data-filter="all">All</button>
-            <button class="filter-btn" type="button" data-filter="web">Web</button>
-            <button class="filter-btn" type="button" data-filter="branding">Branding</button>
-            <button class="filter-btn" type="button" data-filter="information">Information</button>
-            <button class="filter-btn" type="button" data-filter="visual">Visual</button>
-          </div>
+        <div class="portfolio-hero-inner reveal-up">
+          <span class="portfolio-kicker">Selected Work</span>
+          <h1 class="portfolio-title" id="portfolioTitle">Portfolio</h1>
+          <p class="portfolio-intro">
+          </p>
         </div>
+      </div>
+    </section>
 
-        <br>
+    <!-- ================= FILTERS ================= -->
+    <section class="portfolio-filter-wrap section-white reveal-group" aria-label="Portfolio filters">
+      <div class="container section-shell">
+        <div class="portfolio-filters reveal-up" aria-label="Project categories">
+          <span class="filter-label">Filter:</span>
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="ux">UX/UI</button>
+          <button class="filter-btn" type="button" data-filter="web">Web</button>
+          <button class="filter-btn" type="button" data-filter="branding">Branding</button>
+          <button class="filter-btn" type="button" data-filter="information">Information</button>
+          <button class="filter-btn" type="button" data-filter="visual">Visual</button>
+        </div>
+      </div>
+    </section>
 
-        <!-- ================= PROJECT GRID ================= -->
+    <!-- ================= PROJECT GRID ================= -->
+    <section class="portfolio-grid-section section-block section-white reveal-group">
+      <div class="container section-shell">
         <div class="row g-4" id="portfolioGrid">
 
           <!-- AANY -->
-          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="web branding">
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="ux web branding">
             <a
-              href="projects/pro-website-design.html#aany"
+              href="projects/pro-aany.html"
               class="project-card-link"
               aria-label="View Asian Arts New York project"
             >
@@ -144,11 +157,11 @@
                   loading="lazy"
                 />
                 <div class="project-card-body">
-                  <p class="project-tag">Web Design • Front-End</p>
+                  <p class="project-tag">UX/UI • Web Design • Branding</p>
                   <h3 class="project-card-title">Asian Arts New York</h3>
                   <p class="project-card-text">
-                    Website design, development, and visual communication for a cultural organization,
-                    with a focus on structured content and event presentation.
+                    A cultural organization website project focused on content hierarchy,
+                    responsive page structure, event presentation, and visual identity support.
                   </p>
                 </div>
               </article>
@@ -156,9 +169,9 @@
           </div>
 
           <!-- WAADA -->
-          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="web">
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="ux web visual">
             <a
-              href="projects/pro-website-design.html#waada"
+              href="projects/pro-waada.html"
               class="project-card-link"
               aria-label="View WAADA project"
             >
@@ -169,11 +182,36 @@
                   loading="lazy"
                 />
                 <div class="project-card-body">
-                  <p class="project-tag">Web Support • UX Thinking</p>
+                  <p class="project-tag">UX/UI • Web Support • Visual System</p>
                   <h3 class="project-card-title">WAADA</h3>
                   <p class="project-card-text">
-                    Designed and maintained visual and web systems for an arts organization,
-                    focusing on user experience, content structure, and scalable updates.
+                    Website maintenance and visual communication work for an arts organization,
+                    improving usability, content clarity, and scalable page updates.
+                  </p>
+                </div>
+              </article>
+            </a>
+          </div>
+
+          <!-- Information Design -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="ux information visual">
+            <a
+              href="projects/pro-information-design.html"
+              class="project-card-link"
+              aria-label="View Information Design project"
+            >
+              <article class="project-card h-100">
+                <img
+                  src="imgs/Cover/cover_visualization.webp"
+                  alt="Information design project preview"
+                  loading="lazy"
+                />
+                <div class="project-card-body">
+                  <p class="project-tag">UX Thinking • Information Design</p>
+                  <h3 class="project-card-title">Information Design</h3>
+                  <p class="project-card-text">
+                    A visual storytelling project exploring how hierarchy, structure,
+                    data, and narrative can improve audience understanding.
                   </p>
                 </div>
               </article>
@@ -197,33 +235,8 @@
                   <p class="project-tag">Brand Design • Visual Identity</p>
                   <h3 class="project-card-title">Funwe Project</h3>
                   <p class="project-card-text">
-                    A capstone branding project focused on logo design, visual identity,
-                    and promotional materials from concept to final presentation.
-                  </p>
-                </div>
-              </article>
-            </a>
-          </div>
-
-          <!-- Information Design -->
-          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="information">
-            <a
-              href="projects/pro-information-design.html"
-              class="project-card-link"
-              aria-label="View Information Design project"
-            >
-              <article class="project-card h-100">
-                <img
-                  src="imgs/Cover/cover_visualization.webp"
-                  alt="Information design project preview"
-                  loading="lazy"
-                />
-                <div class="project-card-body">
-                  <p class="project-tag">Information Design • Visual Storytelling</p>
-                  <h3 class="project-card-title">Information Design</h3>
-                  <p class="project-card-text">
-                    A project exploring how data, visual hierarchy, and narrative structure
-                    can improve clarity and audience understanding.
+                    A branding project focused on logo design, visual identity,
+                    promotional materials, and consistent brand presentation.
                   </p>
                 </div>
               </article>
@@ -231,7 +244,7 @@
           </div>
 
           <!-- Printing Design -->
-          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="visual">
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="visual information">
             <a
               href="projects/pro-printing-design.html"
               class="project-card-link"
@@ -244,11 +257,36 @@
                   loading="lazy"
                 />
                 <div class="project-card-body">
-                  <p class="project-tag">Graphic Design • Print</p>
+                  <p class="project-tag">Graphic Design • Print Layout</p>
                   <h3 class="project-card-title">Printing Design</h3>
                   <p class="project-card-text">
-                    Print-focused design work that emphasizes layout clarity,
-                    visual consistency, and communication across promotional materials.
+                    Print-focused design work emphasizing layout clarity,
+                    visual consistency, typography, and communication across materials.
+                  </p>
+                </div>
+              </article>
+            </a>
+          </div>
+
+          <!-- EcoYummy -->
+          <div class="col-lg-4 col-md-6 portfolio-card reveal-card" data-category="branding visual information">
+            <a
+              href="projects/pro-eco-yummy.html"
+              class="project-card-link"
+              aria-label="View EcoYummy project"
+            >
+              <article class="project-card h-100">
+                <img
+                  src="imgs/EcoYummy/eco-yummy_company.webp"
+                  alt="EcoYummy project preview"
+                  loading="lazy"
+                />
+                <div class="project-card-body">
+                  <p class="project-tag">Brand Concept • Packaging</p>
+                  <h3 class="project-card-title">EcoYummy</h3>
+                  <p class="project-card-text">
+                    A sustainable product concept combining visual branding,
+                    packaging communication, nutrition information, and market positioning.
                   </p>
                 </div>
               </article>
@@ -273,7 +311,7 @@
                   <h3 class="project-card-title">Chocolate Bar Project</h3>
                   <p class="project-card-text">
                     A packaging-centered visual design project focused on product presentation,
-                    branding, and shelf-level visual appeal.
+                    branding, typography, and shelf-level visual appeal.
                   </p>
                 </div>
               </article>

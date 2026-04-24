@@ -7,213 +7,338 @@
   <title>Information Design – Duan Studio</title>
   <meta
     name="description"
-    content="Information design and data visualization projects by Duan Studio."
+    content="Information design and data visualization projects by Duan Studio, exploring visual storytelling, timelines, mapping, and interactive presentation."
+  />
+  <meta
+    name="keywords"
+    content="Information Design, Data Visualization, Duan Studio, Liam Duan, Prezi, Visual Storytelling, UX, Graphic Design"
   />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="icon" href="../imgs/favicon.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../imgs/apple-touch-icon.png" sizes="180x180" />
+  <link rel="preload" as="image" href="../imgs/Information_Design/data_visualization.webp" />
+
+  <meta name="theme-color" content="#4461a9" />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <nav class="navbar navbar-expand-lg navbar-light site-navbar">
-    <div class="container nav-shell">
-      <a class="navbar-brand" href="../index.html">
-        <img src="../imgs/nav_logo.png" class="logo-img" />
-      </a>
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <nav
+      class="navbar navbar-expand-lg navbar-light site-navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="container nav-shell">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="../index.html"
+          aria-label="Duan Studio home"
+        >
+          <img src="../imgs/nav_logo.png" alt="Duan Studio Logo" class="logo-img" />
+        </a>
 
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="../portfolio.html">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#process">Process</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="../portfolio.html">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#process">Process</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#about">About</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<!-- ================= MAIN ================= -->
-<main class="site-main">
+  <!-- ================= MAIN ================= -->
+  <main class="site-main">
 
-<!-- ================= HERO ================= -->
-<section class="section-block section-soft reveal-group">
-  <div class="container section-shell">
+    <!-- ================= HERO ================= -->
+    <section class="section-block section-soft reveal-group" id="top">
+      <div class="container section-shell">
+        <div class="section-heading text-center reveal-up">
+          <span class="section-label">Information Design</span>
+          <h1 class="section-title">Data to Visual Stories</h1>
+          <p class="section-intro mx-auto" style="max-width: 760px;">
+            Transforming raw information into meaningful visual narratives through
+            structure, hierarchy, storytelling, and interactive presentation.
+          </p>
+        </div>
 
-    <div class="section-heading text-center reveal-up">
-      <span class="section-label">Information Design</span>
-      <h1 class="section-title">Data to Visual Stories</h1>
-      <p class="section-intro">
-        Transforming raw data into meaningful visual narratives through structure,
-        storytelling, and interaction.
-      </p>
-    </div>
-
-    <div class="reveal-card text-center">
-      <img
-        src="../imgs/Information_Design/data_visualization.webp"
-        class="img-fluid rounded shadow"
-        style="max-width:720px;"
-      />
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= OVERVIEW ================= -->
-<section class="section-block section-white reveal-group">
-  <div class="container section-shell">
-
-    <div class="row align-items-center g-4 g-lg-5">
-
-      <div class="col-md-6">
-        <div class="reveal-card">
+        <div class="reveal-card text-center">
           <img
-            src="../imgs/Information_Design/My Journey.webp"
-            class="img-fluid rounded shadow"
+            src="../imgs/Information_Design/data_visualization.webp"
+            alt="Information design data visualization project cover"
+            class="img-fluid rounded shadow d-block mx-auto"
+            style="width: 100%; max-width: 720px; height: auto;"
+            loading="eager"
           />
         </div>
       </div>
+    </section>
 
-      <div class="col-md-6">
-        <div class="reveal-up">
-          <span class="section-label">Overview</span>
-          <h2 class="section-title">Visualizing Information</h2>
+    <!-- ================= OVERVIEW ================= -->
+    <section class="section-block section-white reveal-group">
+      <div class="container section-shell">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-md-6">
+            <div class="reveal-card">
+              <img
+                src="../imgs/Information_Design/My Journey.webp"
+                alt="Personal journey information design visualization"
+                class="img-fluid rounded shadow"
+                loading="lazy"
+              />
+            </div>
+          </div>
 
-          <p>
-            This project explores how complex data can be transformed into
-            clear and engaging visual narratives using information design principles.
-          </p>
+          <div class="col-md-6">
+            <div class="reveal-up">
+              <span class="section-label">Overview</span>
+              <h2 class="section-title">Visualizing Information</h2>
 
-          <p>
-            Techniques such as mapping, sequencing, and layering were applied
-            to structure information in a meaningful and accessible way.
-          </p>
+              <p>
+                This project explores how complex information can be transformed into
+                clear and engaging visual narratives using information design principles.
+              </p>
 
-          <p>
-            The final outcome integrates storytelling and interaction design
-            to enhance audience understanding and engagement.
-          </p>
+              <p>
+                Techniques such as mapping, sequencing, hierarchy, and layering were used
+                to organize information in a meaningful and accessible way.
+              </p>
+
+              <p>
+                The final outcome integrates visual storytelling and interactive presentation
+                to improve audience understanding and engagement.
+              </p>
+
+              <a
+                href="https://liam-l-d.github.io/Visual_Life/timeline.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-brand mt-3"
+              >
+                View Live Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DETAILS ================= -->
+    <section class="section-block section-soft reveal-group">
+      <div class="container section-shell">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="project-card h-100 reveal-card">
+              <div class="project-card-body">
+                <span class="section-label">Key Design Elements</span>
+                <h2 class="project-card-title">What this project includes</h2>
+
+                <ul class="mb-0 ps-3">
+                  <li class="mb-2">Data visualization across time, location, and personal experience</li>
+                  <li class="mb-2">Storytelling-driven structure with clear visual hierarchy</li>
+                  <li class="mb-2">Mapping and timeline-based organization of information</li>
+                  <li class="mb-0">Interactive presentation experiences created through Prezi and web format</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="project-card h-100 reveal-card">
+              <div class="project-card-body">
+                <span class="section-label">Tools Used</span>
+                <h2 class="project-card-title">Software</h2>
+                <p class="project-card-text mb-0">
+                  Prezi, Adobe Illustrator, HTML, CSS
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="section-block section-white reveal-group">
+      <div class="container section-shell">
+        <div class="section-heading text-center reveal-up">
+          <span class="section-label">Gallery</span>
+          <h2 class="section-title">Interactive Work</h2>
+        </div>
+
+        <div class="portfolio-grid mt-4">
 
           <a
-            href="https://liam-l-d.github.io/Visual_Life/timeline.html"
+            href="https://prezi.com/p/plqcyiwdcota/?present=1"
             target="_blank"
-            class="btn-brand mt-3"
+            rel="noopener noreferrer"
+            class="portfolio-item reveal-card text-decoration-none"
           >
-            View Live Project
+            <img
+              src="../imgs/Information_Design/Timeline Prezi.webp"
+              alt="Prezi timeline information design project"
+              class="img-fluid"
+              loading="lazy"
+            />
+            <div class="info">Prezi – Timeline</div>
+          </a>
+
+          <a
+            href="https://prezi.com/p/haq3kjmhnplu/?present=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-item reveal-card text-decoration-none"
+          >
+            <img
+              src="../imgs/Information_Design/Mapping Prezi.webp"
+              alt="Prezi mapping information design project"
+              class="img-fluid"
+              loading="lazy"
+            />
+            <div class="info">Prezi – Mapping</div>
           </a>
 
         </div>
       </div>
+    </section>
 
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= DETAILS ================= -->
-<section class="section-block section-soft reveal-group">
-  <div class="container section-shell">
-
-    <div class="row g-4">
-
-      <div class="col-lg-8">
-        <div class="project-card reveal-card h-100">
-          <div class="project-card-body">
-
-            <span class="section-label">Key Elements</span>
-            <h2 class="project-card-title">What this project includes</h2>
-
-            <ul class="ps-3">
-              <li>Data visualization across time and location</li>
-              <li>Storytelling-driven structure and hierarchy</li>
-              <li>Interactive presentation using Prezi</li>
-            </ul>
-
+    <!-- ================= PROJECT NAV ================= -->
+    <section class="section-block section-soft reveal-group">
+      <div class="container section-shell">
+        <div class="text-center reveal-up">
+          <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+            <a href="pro-printing-design.html" class="btn-outline-brand">Previous Project</a>
+            <a href="../portfolio.html" class="btn-brand">Back to Work</a>
+            <a href="pro-website-design.html" class="btn-outline-brand">Next Project</a>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-4">
-        <div class="project-card reveal-card h-100">
-          <div class="project-card-body">
+  </main>
 
-            <span class="section-label">Tools</span>
-            <h2 class="project-card-title">Software</h2>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-section text-white pt-5 pb-3 bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4 text-md-start text-center">
+          <img
+            src="../imgs/LD_Logo_white.png"
+            alt="Duan Studio Logo"
+            style="height: 50px; width: auto;"
+            class="mb-2"
+          />
+          <p class="mb-1 fw-bold">DUAN STUDIO</p>
+          <p class="mb-1">Based in Albany, NY</p>
+        </div>
 
-            <p class="project-card-text">
-              Prezi, Adobe Illustrator
+        <div class="col-md-6 mb-4 text-md-end text-center">
+          <h6 class="text-uppercase fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a class="text-white text-decoration-none" href="../portfolio.html">Work</a></li>
+            <li><a class="text-white text-decoration-none" href="../index.html#services">Services</a></li>
+            <li><a class="text-white text-decoration-none" href="../index.html#process">Process</a></li>
+            <li><a class="text-white text-decoration-none" href="../index.html#about">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center mt-3">
+          <a
+            href="https://www.facebook.com/Liam.L.Duan"
+            target="_blank"
+            aria-label="Facebook"
+            class="me-3"
+          >
+            <i class="fab fa-facebook-f fa-lg text-white"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/liam.lduan/"
+            target="_blank"
+            aria-label="Instagram"
+            class="me-3"
+          >
+            <i class="fab fa-instagram fa-lg text-white"></i>
+          </a>
+          <a href="mailto:lduan1996@gmail.com" aria-label="Email" class="me-3">
+            <i class="fas fa-envelope fa-lg text-white"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/liam-duan-248253285/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in fa-lg text-white"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center border-top border-white pt-3 mt-4">
+          <div class="footer-credits">
+            <p class="small mb-2">
+              © <span id="year"></span>
+              <a href="../index.html" class="duan-brand">Duan Studio</a>. All rights reserved.
             </p>
-
+            <p class="small mb-0">Designed by Liam Duan</p>
           </div>
         </div>
       </div>
-
     </div>
+  </footer>
 
-  </div>
-</section>
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-<!-- ================= GALLERY ================= -->
-<section class="section-block section-white reveal-group">
-  <div class="container section-shell">
-
-    <div class="section-heading text-center reveal-up">
-      <span class="section-label">Gallery</span>
-      <h2 class="section-title">Interactive Work</h2>
-    </div>
-
-    <div class="portfolio-grid mt-4">
-
-      <a href="https://prezi.com/p/plqcyiwdcota/?present=1"
-         target="_blank"
-         class="portfolio-item reveal-card text-decoration-none">
-        <img src="../imgs/Information_Design/Timeline Prezi.webp" />
-        <div class="info">Prezi – Timeline</div>
-      </a>
-
-      <a href="https://prezi.com/p/haq3kjmhnplu/?present=1"
-         target="_blank"
-         class="portfolio-item reveal-card text-decoration-none">
-        <img src="../imgs/Information_Design/Mapping Prezi.webp" />
-        <div class="info">Prezi – Mapping</div>
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= NAV ================= -->
-<section class="section-block section-soft reveal-group">
-  <div class="container section-shell text-center reveal-up">
-
-    <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-      <a href="pro-printing-design.html" class="btn-outline-brand">Previous</a>
-      <a href="../portfolio.html" class="btn-brand">Back to Work</a>
-      <a href="pro-website-design.html" class="btn-outline-brand">Next</a>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer-section text-white pt-5 pb-3 bg-dark">
-  <div class="container text-center">
-    <p>© Duan Studio</p>
-  </div>
-</footer>
-
-<script src="../main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../main.js" defer></script>
 </body>
 </html>
