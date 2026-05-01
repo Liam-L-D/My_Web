@@ -7,11 +7,11 @@
   <title>Asian Arts New York – Duan Studio</title>
   <meta
     name="description"
-    content="Asian Arts New York website design and visual communication system project by Duan Studio."
+    content="Asian Arts New York visual communication system project by Duan Studio, including website design, event posters, a multi-page booklet, content organization, visual identity support, and ongoing design maintenance."
   />
   <meta
     name="keywords"
-    content="Asian Arts New York, Duan Studio, Liam Duan, web design, UX/UI, front-end development, cultural organization, visual communication"
+    content="Asian Arts New York, Duan Studio, Liam Duan, web design, graphic design, poster design, booklet design, visual identity, visual communication, cultural organization, UX design"
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,64 +33,87 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+
   <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <nav
-      class="navbar navbar-expand-lg navbar-light site-navbar"
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div class="container nav-shell">
-        <a
-          class="navbar-brand d-flex align-items-center"
-          href="../index.html"
-          aria-label="Duan Studio home"
-        >
-          <img src="../imgs/nav_logo.png" alt="Duan Studio Logo" class="logo-img" />
-        </a>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav
+    class="navbar navbar-expand-lg navbar-light site-navbar"
+    role="navigation"
+    aria-label="Main navigation"
+  >
+    <div class="container nav-shell">
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- LOGO -->
+      <a
+        class="navbar-brand d-flex align-items-center"
+        href="../index.html"
+        aria-label="Duan Studio home"
+      >
+        <img src="../imgs/nav_logo.png" alt="Duan Studio Logo" class="logo-img" />
+      </a>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="../portfolio.html">Work</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#process">Process</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#about">About</a>
-            </li>
-          </ul>
-        </div>
+      <!-- MOBILE BUTTON -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- NAV -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="../portfolio.html"
+            >
+              Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#services">
+              Services
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#process">
+              Process
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#about">
+              About
+            </a>
+          </li>
+
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <!-- ================= MAIN ================= -->
   <main class="site-main">
@@ -100,19 +123,22 @@
       <div class="container section-shell">
         <div class="section-heading text-center reveal-up">
           <span class="section-label">Project</span>
-          <h1 class="section-title">Asian Arts New York – Website & Visual Communication System</h1>
-          <p class="section-intro mx-auto" style="max-width: 760px;">
-            A cultural organization website project focused on event communication,
-            content structure, responsive design, and long-term maintainability.
+
+          <h1 class="section-title">
+            Asian Arts New York
+          </h1>
+
+          <p class="section-intro mx-auto" style="max-width: 780px;">
+            A communication design project for a cultural organization, integrating website structure, event content, visual identity, and print materials into a unified system.
           </p>
         </div>
 
         <div class="reveal-card text-center">
           <img
-            src="../imgs/AANY/aany-cover.webp"
-            alt="Asian Arts New York website project preview"
+            src="../imgs/AANY/aany_banner.webp"
+            alt="Asian Arts New York visual communication project preview"
             class="img-fluid rounded shadow d-block mx-auto"
-            style="width: 100%; max-width: 820px; height: auto;"
+            style="width: 100%; max-width: 900px; height: auto;"
             loading="eager"
           />
         </div>
@@ -123,11 +149,12 @@
     <section class="section-block section-white reveal-group">
       <div class="container section-shell">
         <div class="row align-items-center g-4 g-lg-5">
+
           <div class="col-md-6">
             <div class="reveal-card">
               <img
                 src="../imgs/AANY/aany-overview.webp"
-                alt="Asian Arts New York website overview"
+                alt="Asian Arts New York website, poster, and booklet overview"
                 class="img-fluid rounded shadow"
                 loading="lazy"
               />
@@ -137,25 +164,19 @@
           <div class="col-md-6">
             <div class="reveal-up">
               <span class="section-label">Overview</span>
-              <h2 class="section-title">Website + Content System</h2>
 
-              <p>
-                Asian Arts New York is a cultural organization that promotes Asian arts,
-                performances, exhibitions, and community-based cultural programs.
-              </p>
+              <h2 class="section-title">
+                Website + Print + Event Communication
+              </h2>
 
-              <p>
-                The goal of this project was to create a clearer digital experience that
-                helps visitors understand the organization, explore events, and access
-                important information more easily.
-              </p>
+              <br />
 
-              <p>
-                My work combined visual design, front-end development, content organization,
-                and ongoing website maintenance to support the organization’s communication needs.
-              </p>
+             <p>
+ 			 Asian Arts New York is a cultural organization dedicated to promoting Asian arts and community programs. In this project, I designed and developed the organization’s website from the ground up, along with supporting materials such as event content, posters, and a printed booklet. I approached the work as a connected system, creating a consistent visual language across both digital and print platforms.
+			</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -164,88 +185,103 @@
     <section class="section-block section-soft reveal-group">
       <div class="container section-shell">
         <div class="row g-4">
+
           <div class="col-lg-8">
             <div class="project-card h-100 reveal-card">
               <div class="project-card-body">
-                <span class="section-label">Project Focus</span>
-                <h2 class="project-card-title">What this project includes</h2>
+                <span class="section-label">Project Scope</span>
+
+                <h2 class="project-card-title">
+                  What this project includes
+                </h2>
 
                 <ul class="mb-0 ps-3">
                   <li class="mb-2">Responsive website design and front-end development</li>
                   <li class="mb-2">Event page structure and content organization</li>
-                  <li class="mb-2">Visual hierarchy improvements for readability and navigation</li>
+                  <li class="mb-2">Promotional poster design for cultural events</li>
+                  <li class="mb-2">20-page booklet layout and editorial design</li>
+                  <li class="mb-2">Logo usage, typography, and visual identity consistency</li>
                   <li class="mb-2">Reusable layout sections for future updates</li>
-                  <li class="mb-0">Ongoing maintenance for event and program content</li>
+                  <li class="mb-0">Ongoing web and visual communication support</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4">
-            <div class="project-card h-100 reveal-card">
-              <div class="project-card-body">
-                <span class="section-label">Role & Tools</span>
-                <h2 class="project-card-title">My Contribution</h2>
-                <p class="project-card-text mb-0">
-                  UX/UI Design, Web Design, Front-End Development, HTML, CSS,
-                  JavaScript, Bootstrap, Visual Communication
-                </p>
-              </div>
-            </div>
-          </div>
+           <div class="project-card h-100 reveal-card">
+   			 <div class="project-card-body">
+    		  <span class="section-label">Role & Tools</span>
+    		    <h2 class="project-card-title">
+     		     My Contribution
+    		    </h2>
+    		    <p class="project-card-text mb-0">
+     		    Visual & Communication Design, UX/UI Design, Front-End Development (HTML, CSS, JavaScript, Bootstrap), and print design including posters and booklet. Tools: Adobe Creative Suite.
+     		    </p>
+    		 </div>
+  			</div>
+		  </div>
+
         </div>
       </div>
     </section>
 
     <!-- ================= CHALLENGE ================= -->
-    <section class="section-block section-white reveal-group">
-      <div class="container section-shell">
-        <div class="row align-items-center g-4 g-lg-5">
-          <div class="col-md-6">
-            <div class="reveal-up">
-              <span class="section-label">Challenge</span>
-              <h2 class="section-title">Making cultural content easier to understand</h2>
+<section class="section-block section-white reveal-group">
+  <div class="container section-shell">
+    <div class="row align-items-center g-4 g-lg-5">
 
-              <p>
-                The website needed to present a growing amount of information, including
-                events, programs, organization details, artist content, and media updates.
-              </p>
+      <div class="col-md-6">
+        <div class="reveal-up">
+          <span class="section-label">Challenge</span>
 
-              <p>
-                The challenge was not only visual. The information had to be structured in a
-                way that visitors could quickly scan, understand, and navigate across devices.
-              </p>
+          <h2 class="section-title">
+            Organizing cultural content across multiple formats
+          </h2>
 
-              <p>
-                This required a balance between strong visual presentation and practical
-                maintainability for future updates.
-              </p>
-            </div>
-          </div>
+          <br />
 
-          <div class="col-md-6">
-            <div class="reveal-card">
-              <img
-                src="../imgs/AANY/aany-challenge.webp"
-                alt="Asian Arts New York content structure and page layout"
-                class="img-fluid rounded shadow"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          <p>
+            The organization needed to communicate events, programs, artist content,
+            and community updates across both digital and printed materials.
+          </p>
+
+          <p>
+            The challenge was to create a clear and consistent system that could support
+            different communication needs — navigation, promotion, storytelling, and ongoing
+            updates — without losing structure or visual coherence.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- ================= PROCESS ================= -->
+      <div class="col-md-6">
+        <div class="reveal-card">
+          <img
+            src="../imgs/AANY/aany-news.webp"
+            alt="Asian Arts New York event content and communication layout"
+            class="img-fluid rounded shadow"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ================= SOLUTION ================= -->
     <section class="section-block section-soft reveal-group">
       <div class="container section-shell">
         <div class="section-heading text-center reveal-up">
-          <span class="section-label">Process</span>
-          <h2 class="section-title">How the solution was built</h2>
-          <p class="section-intro mx-auto" style="max-width: 760px;">
-            The project moved from content organization to visual design and then into
-            responsive front-end implementation.
+          <span class="section-label">Solution</span>
+
+          <h2 class="section-title">
+            A flexible communication system
+          </h2>
+
+          <p class="section-intro mx-auto" style="max-width: 780px;">
+            I treated the project as a system, ensuring consistency across website,
+            print, and event materials.
           </p>
         </div>
 
@@ -255,10 +291,14 @@
             <article class="project-card h-100 reveal-card">
               <div class="project-card-body">
                 <span class="case-label">01</span>
-                <h3 class="project-card-title">Structure</h3>
+
+                <h3 class="project-card-title">
+                  Website Structure
+                </h3>
+
                 <p class="project-card-text">
-                  Organized information into clearer sections for events, programs,
-                  organization details, and visual content.
+                  Built responsive pages and reusable sections for events, programs,
+                  organization information, and future updates.
                 </p>
               </div>
             </article>
@@ -268,10 +308,14 @@
             <article class="project-card h-100 reveal-card">
               <div class="project-card-body">
                 <span class="case-label">02</span>
-                <h3 class="project-card-title">Design</h3>
+
+                <h3 class="project-card-title">
+                  Visual Identity
+                </h3>
+
                 <p class="project-card-text">
-                  Created a cleaner visual hierarchy with consistent spacing, typography,
-                  image presentation, and section rhythm.
+                  Refined logo usage, color application, typography, and layout consistency
+                  across digital and print materials.
                 </p>
               </div>
             </article>
@@ -281,10 +325,14 @@
             <article class="project-card h-100 reveal-card">
               <div class="project-card-body">
                 <span class="case-label">03</span>
-                <h3 class="project-card-title">Build & Maintain</h3>
+
+                <h3 class="project-card-title">
+                  Print & Event Materials
+                </h3>
+
                 <p class="project-card-text">
-                  Developed responsive page layouts and reusable components that support
-                  long-term updates and future content expansion.
+                  Designed posters, event materials, and a 20-page booklet to support
+                  promotion and cultural storytelling.
                 </p>
               </div>
             </article>
@@ -294,15 +342,163 @@
       </div>
     </section>
 
+   <!-- ================= PROCESS ================= -->
+<section class="section-block section-white reveal-group" aria-labelledby="processTitle">
+  <div class="container section-shell">
+    <div class="section-heading text-center reveal-up">
+      <span class="section-label">Process</span>
+
+      <h2 class="section-title" id="processTitle">
+        How the System Was Built
+      </h2>
+
+      <p class="section-intro mx-auto" style="max-width: 760px;">
+        I organized content, defined a consistent visual direction, and built responsive
+        materials that could support the organization’s ongoing communication needs.
+      </p>
+    </div>
+
+    <div class="row g-4 mt-4">
+
+      <div class="col-md-4">
+        <article class="project-card h-100 reveal-card">
+          <div class="project-card-body">
+            <span class="case-label" aria-hidden="true">01</span>
+
+            <h3 class="project-card-title">
+              Content Organization
+            </h3>
+
+            <p class="project-card-text">
+              Structured events, programs, artist information, and organizational content
+              into clear sections for both web and print use.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <article class="project-card h-100 reveal-card">
+          <div class="project-card-body">
+            <span class="case-label" aria-hidden="true">02</span>
+
+            <h3 class="project-card-title">
+              Visual System Design
+            </h3>
+
+            <p class="project-card-text">
+              Defined typography, spacing, image placement, color, and layout hierarchy
+              to create a consistent visual presentation.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <article class="project-card h-100 reveal-card">
+          <div class="project-card-body">
+            <span class="case-label" aria-hidden="true">03</span>
+
+            <h3 class="project-card-title">
+              Development & Maintenance
+            </h3>
+
+            <p class="project-card-text">
+              Built responsive front-end layouts and maintained event content,
+              promotional materials, and visual assets as the project evolved.
+            </p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section-block section-soft reveal-group">
+  <div class="container section-shell">
+    <div class="section-heading text-center reveal-up">
+      <span class="section-label">Gallery</span>
+
+      <h2 class="section-title">Selected Project Outputs</h2>
+
+      <p class="section-intro mx-auto" style="max-width: 760px;">
+        A selection of visual materials created for the organization, including
+        promotional design, booklet layout, and event communication pieces.
+      </p>
+    </div>
+
+    <div class="row g-4 mt-4">
+
+      <div class="col-md-4">
+        <button
+          type="button"
+          class="portfolio-item reveal-card border-0 p-0 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#posterModal"
+          aria-label="Open event poster design"
+        >
+          <img
+            src="../imgs/AANY/aany-poster.webp"
+            alt="Asian Arts New York event poster design"
+            class="img-fluid"
+            loading="lazy"
+          />
+          <div class="info">Event Poster Design</div>
+        </button>
+      </div>
+
+      <div class="col-md-4">
+        <button
+          type="button"
+          class="portfolio-item reveal-card border-0 p-0 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#bookletModal"
+          aria-label="Open 20-page booklet layout"
+        >
+          <img
+            src="../imgs/AANY/20-booklet.webp"
+            alt="Asian Arts New York 20-page booklet design"
+            class="img-fluid"
+            loading="lazy"
+          />
+          <div class="info">20-Page Booklet Layout</div>
+        </button>
+      </div>
+
+      <div class="col-md-4">
+        <button
+          type="button"
+          class="portfolio-item reveal-card border-0 p-0 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#rollupModal"
+          aria-label="Open event communication material"
+        >
+          <img
+            src="../imgs/AANY/roll-up.webp"
+            alt="Asian Arts New York roll-up banner and event communication material"
+            class="img-fluid"
+            loading="lazy"
+          />
+          <div class="info">Event Communication Material</div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
     <!-- ================= OUTCOME ================= -->
     <section class="section-block section-white reveal-group">
       <div class="container section-shell">
         <div class="row align-items-center g-4 g-lg-5">
+
           <div class="col-md-6">
             <div class="reveal-card">
               <img
                 src="../imgs/AANY/aany-outcome.webp"
-                alt="Asian Arts New York final website design outcome"
+                alt="Asian Arts New York final communication system outcome"
                 class="img-fluid rounded shadow"
                 loading="lazy"
               />
@@ -312,88 +508,29 @@
           <div class="col-md-6">
             <div class="reveal-up">
               <span class="section-label">Outcome</span>
-              <h2 class="section-title">Clearer presentation and easier updates</h2>
+
+              <h2 class="section-title">
+                A clearer and more consistent brand experience
+              </h2>
+
+              <br />
 
               <p>
-                The final website system improved how events and organizational content are
-                presented, making the experience more readable and easier to navigate.
+                The final system improved how Asian Arts New York presents its events,
+                programs, and organizational identity across digital and print materials.
               </p>
 
               <p>
-                The redesigned structure also supports ongoing maintenance, allowing future
-                pages and event updates to stay visually consistent.
+                The website became easier to update and navigate, while posters and booklet
+                materials extended the organization’s communication beyond the screen.
               </p>
 
               <p>
-                This project reflects my ability to connect design thinking with practical
-                front-end implementation for real organizational needs.
+                This project reflects my ability to combine graphic design, information
+                design, front-end development, and real organizational communication needs
+                into one cohesive design system.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= GALLERY ================= -->
-    <section class="section-block section-soft reveal-group">
-      <div class="container section-shell">
-        <div class="section-heading text-center reveal-up">
-          <span class="section-label">Gallery</span>
-          <h2 class="section-title">Website Highlights</h2>
-        </div>
-
-        <div class="portfolio-grid mt-4">
-
-          <div class="portfolio-item reveal-card">
-            <img
-              src="../imgs/AANY/aany-home.webp"
-              alt="Asian Arts New York homepage"
-              class="img-fluid"
-              data-bs-toggle="modal"
-              data-bs-target="#modalGallery"
-              data-bs-slide-to="0"
-              loading="lazy"
-            />
-            <div class="info">Homepage</div>
-          </div>
-
-          <div class="portfolio-item reveal-card">
-            <img
-              src="../imgs/AANY/aany-event.webp"
-              alt="Asian Arts New York event page"
-              class="img-fluid"
-              data-bs-toggle="modal"
-              data-bs-target="#modalGallery"
-              data-bs-slide-to="1"
-              loading="lazy"
-            />
-            <div class="info">Event Page</div>
-          </div>
-
-          <div class="portfolio-item reveal-card">
-            <img
-              src="../imgs/AANY/aany-program.webp"
-              alt="Asian Arts New York program page"
-              class="img-fluid"
-              data-bs-toggle="modal"
-              data-bs-target="#modalGallery"
-              data-bs-slide-to="2"
-              loading="lazy"
-            />
-            <div class="info">Program Layout</div>
-          </div>
-
-          <div class="portfolio-item reveal-card">
-            <img
-              src="../imgs/AANY/aany-mobile.webp"
-              alt="Asian Arts New York mobile responsive design"
-              class="img-fluid"
-              data-bs-toggle="modal"
-              data-bs-target="#modalGallery"
-              data-bs-slide-to="3"
-              loading="lazy"
-            />
-            <div class="info">Responsive Design</div>
           </div>
 
         </div>
@@ -405,8 +542,8 @@
       <div class="container section-shell">
         <div class="text-center reveal-up">
           <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-            <a href="pro-funwe.html" class="btn-outline-brand">Previous Project</a>
-            <a href="../portfolio.html" class="btn-brand">Back to Work</a>
+       
+            <a href="../portfolio.html" class="btn-brand">Back to Portfolio</a>
             <a href="pro-waada.html" class="btn-outline-brand">Next Project</a>
           </div>
         </div>
@@ -415,63 +552,72 @@
 
   </main>
 
-  <!-- ================= MODAL GALLERY ================= -->
-  <div class="modal fade" id="modalGallery" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content bg-transparent border-0">
-        <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
+<!-- ================= MODAL IMAGES ================= -->
 
-            <div class="carousel-item active">
-              <img
-                src="../imgs/AANY/aany-home.webp"
-                class="d-block w-100 rounded shadow"
-                alt="Asian Arts New York homepage"
-              />
-            </div>
+<!-- Poster Modal -->
+<div class="modal fade" id="posterModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <button
+        type="button"
+        class="btn-close btn-close-white ms-auto mb-2"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
 
-            <div class="carousel-item">
-              <img
-                src="../imgs/AANY/aany-event.webp"
-                class="d-block w-100 rounded shadow"
-                alt="Asian Arts New York event page"
-              />
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="../imgs/AANY/aany-program.webp"
-                class="d-block w-100 rounded shadow"
-                alt="Asian Arts New York program layout"
-              />
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="../imgs/AANY/aany-mobile.webp"
-                class="d-block w-100 rounded shadow"
-                alt="Asian Arts New York responsive mobile layout"
-              />
-            </div>
-
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-
-        </div>
-      </div>
+      <img
+        src="../imgs/AANY/modal_aany-poster.webp"
+        class="img-fluid rounded shadow"
+        alt="Asian Arts New York event poster design enlarged"
+      />
     </div>
   </div>
+</div>
+
+<!-- Booklet Modal -->
+<div class="modal fade" id="bookletModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <button
+        type="button"
+        class="btn-close btn-close-white ms-auto mb-2"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+
+      <img
+        src="../imgs/AANY/modal_20-booklet.webp"
+        class="img-fluid rounded shadow"
+        alt="Asian Arts New York 20-page booklet design enlarged"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Roll-up Modal -->
+<div class="modal fade" id="rollupModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <button
+        type="button"
+        class="btn-close btn-close-white ms-auto mb-2"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+
+      <img
+        src="../imgs/AANY/modal_roll-up.webp"
+        class="img-fluid rounded shadow"
+        alt="Asian Arts New York roll-up banner and event communication material enlarged"
+      />
+    </div>
+  </div>
+</div>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer-section text-white pt-5 pb-3 bg-dark">
     <div class="container">
+
       <div class="row">
         <div class="col-md-6 mb-4 text-md-start text-center">
           <img
@@ -487,10 +633,18 @@
         <div class="col-md-6 mb-4 text-md-end text-center">
           <h6 class="text-uppercase fw-bold">Quick Links</h6>
           <ul class="list-unstyled">
-            <li><a class="text-white text-decoration-none" href="../portfolio.html">Work</a></li>
-            <li><a class="text-white text-decoration-none" href="../index.html#services">Services</a></li>
-            <li><a class="text-white text-decoration-none" href="../index.html#process">Process</a></li>
-            <li><a class="text-white text-decoration-none" href="../index.html#about">About</a></li>
+            <li>
+              <a class="text-white text-decoration-none" href="../portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="../index.html#services">Services</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="../index.html#process">Process</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="../index.html#about">About</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -540,6 +694,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </footer>
 
@@ -550,5 +705,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../main.js" defer></script>
+
 </body>
 </html>

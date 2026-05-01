@@ -43,12 +43,13 @@ function initRotatingWord() {
 // ======================================
 function initNextProjectButton() {
   const projectList = [
-    "pro-chocolate-bar.html",
-    "pro-eco-yummy.html",
+    "pro-aany.html",
+    "pro-waada.html",
+    "pro-information-design.html",
     "pro-funwe.html",
     "pro-printing-design.html",
-    "pro-prepress-manual.html",
-    "pro-information-design.html"
+    "pro-eco-yummy.html",
+    "pro-chocolate-bar.html"
   ];
 
   const currentPage = window.location.pathname.split("/").pop();
