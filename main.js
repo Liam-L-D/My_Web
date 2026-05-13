@@ -3,23 +3,19 @@
 // ==============================
 function initFooterYear() {
   const yearEl = document.getElementById("year");
-  if (!yearEl) return;
-  yearEl.textContent = new Date().getFullYear();
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 }
 
 // ==============================
-// Typed Text Effect
+// Rotating Word
 // ==============================
 function initRotatingWord() {
   const el = document.getElementById("rotating-word");
   if (!el) return;
 
-  const words = [
-    "UX/UI Systems",
-    "Web Interfaces",
-    "Visual Identities"
-  ];
-
+  const words = ["UX/UI Systems", "Web Interfaces", "Visual Identities"];
   let index = 0;
 
   setInterval(() => {
@@ -28,6 +24,7 @@ function initRotatingWord() {
     setTimeout(() => {
       index = (index + 1) % words.length;
       el.textContent = words[index];
+
       el.classList.remove("fade-out");
       el.classList.add("fade-in");
 
@@ -38,9 +35,9 @@ function initRotatingWord() {
   }, 2600);
 }
 
-// ======================================
-// Next Project Button Insertion Script
-// ======================================
+// ==============================
+// Next Project Button
+// ==============================
 function initNextProjectButton() {
   const projectList = [
     "pro-aany.html",
@@ -54,47 +51,56 @@ function initNextProjectButton() {
 
   const currentPage = window.location.pathname.split("/").pop();
   const currentIndex = projectList.indexOf(currentPage);
-
-  if (currentIndex === -1) return;
-
-  const nextIndex = (currentIndex + 1) % projectList.length;
-  const nextProject = projectList[nextIndex];
   const container = document.getElementById("next-project-btn-container");
 
-  if (!container || container.querySelector("a")) return;
+  if (currentIndex === -1 || !container || container.querySelector("a")) return;
+
+  const nextProject = projectList[(currentIndex + 1) % projectList.length];
 
   const nextBtn = document.createElement("a");
   nextBtn.href = nextProject;
   nextBtn.className = "btn btn-outline-primary";
   nextBtn.textContent = "Next Project →";
+
   container.appendChild(nextBtn);
 }
 
-// ===============================================
-// Shared Modal + Carousel Handler for All Projects
-// ===============================================
+// ==============================
+// Simple Project Gallery Modal
+// ==============================
 function initProjectGalleryModal() {
-  const galleryItems = document.querySelectorAll(".portfolio-item img");
-  const modalElement = document.querySelector("#modalGallery");
-  const carouselElement = document.querySelector("#carouselIndicators");
+  const galleryImages = document.querySelectorAll(".portfolio-item img");
+  const modalElement = document.getElementById("modalGallery");
+  const carouselElement = document.getElementById("carouselIndicators");
 
-  if (!galleryItems.length || !modalElement || !carouselElement) return;
+  if (!galleryImages.length || !modalElement || !carouselElement) return;
   if (typeof bootstrap === "undefined") return;
 
-  const carousel = new bootstrap.Carousel(carouselElement);
+  const carouselItems = carouselElement.querySelectorAll(".carousel-item");
+  if (!carouselItems.length) return;
 
-  galleryItems.forEach((img, index) => {
+  const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+  const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, {
+    interval: false,
+    ride: false
+  });
+
+  galleryImages.forEach((img, index) => {
+    img.style.cursor = "pointer";
+
     img.addEventListener("click", () => {
-      carousel.to(index);
-      const modal = new bootstrap.Modal(modalElement);
+      if (index < carouselItems.length) {
+        carousel.to(index);
+      }
+
       modal.show();
     });
   });
 }
 
-// ===============================================
+// ==============================
 // Reveal Animation
-// ===============================================
+// ==============================
 function initRevealAnimation() {
   const revealGroups = document.querySelectorAll(".reveal-group");
   const revealItems = document.querySelectorAll(".reveal-up, .reveal-card");
@@ -106,21 +112,18 @@ function initRevealAnimation() {
     const groupItems = group.querySelectorAll(".reveal-up, .reveal-card");
 
     groupItems.forEach((item, index) => {
-      if (
+      const noDelay =
         !isPortfolioPage &&
         (
           item.closest(".services-section") ||
           item.closest(".hero-section") ||
           item.closest(".featured-projects-section")
-        )
-      ) {
-        item.style.setProperty("--delay", "0s");
-      } else {
-        item.style.setProperty(
-          "--delay",
-          isPortfolioPage ? `${index * 0.08}s` : `${index * 0.03}s`
         );
-      }
+
+      item.style.setProperty(
+        "--delay",
+        noDelay ? "0s" : `${index * (isPortfolioPage ? 0.08 : 0.03)}s`
+      );
     });
   });
 
@@ -133,6 +136,7 @@ function initRevealAnimation() {
     (entries, obs) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
+
         entry.target.classList.add("is-visible");
         obs.unobserve(entry.target);
       });
@@ -146,9 +150,9 @@ function initRevealAnimation() {
   revealItems.forEach((item) => observer.observe(item));
 }
 
-// ===============================================
+// ==============================
 // Portfolio Filter
-// ===============================================
+// ==============================
 function initPortfolioFilter() {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const portfolioCards = document.querySelectorAll(".portfolio-card");
@@ -157,7 +161,7 @@ function initPortfolioFilter() {
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const filter = button.getAttribute("data-filter");
+      const filter = button.dataset.filter;
 
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
@@ -165,19 +169,20 @@ function initPortfolioFilter() {
       let visibleIndex = 0;
 
       portfolioCards.forEach((card) => {
-        const categories = card.getAttribute("data-category") || "";
+        const categories = (card.dataset.category || "")
+          .split(" ")
+          .map((cat) => cat.trim());
+
         const shouldShow = filter === "all" || categories.includes(filter);
 
         if (shouldShow) {
           card.classList.remove("is-hidden");
           card.classList.remove("is-visible");
           card.style.setProperty("--delay", `${visibleIndex * 0.08}s`);
-          visibleIndex += 1;
+          visibleIndex++;
 
           requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              card.classList.add("is-visible");
-            });
+            card.classList.add("is-visible");
           });
         } else {
           card.classList.add("is-hidden");
@@ -191,7 +196,7 @@ function initPortfolioFilter() {
 // ==============================
 // Init All
 // ==============================
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   initFooterYear();
   initRotatingWord();
   initNextProjectButton();
